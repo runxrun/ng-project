@@ -11,6 +11,8 @@ import { HomeComponent } from './pages/home/home.component';
 import { SupportComponent } from './pages/support/support.component';
 import { PagenotfoundComponent } from './pages/pagenotfound/pagenotfound.component';
 import { RouterlinkRoutingModule } from './routerlink/routerlink-routing.module';
+import { ContractComponent } from './pages/contract/contract.component';
+import { MultiLanguagesComponent } from './templates/multi-languages/multi-languages.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,8 @@ import { RouterlinkRoutingModule } from './routerlink/routerlink-routing.module'
     HomeComponent,
     SupportComponent,
     PagenotfoundComponent,
+    ContractComponent,
+    MultiLanguagesComponent,
   ],
   imports: [
     BrowserModule,
