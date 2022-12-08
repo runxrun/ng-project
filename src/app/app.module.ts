@@ -7,6 +7,17 @@ import { FooterNoAuthComponent } from './templates/footer-no-auth/footer-no-auth
 import { LoginNoAuthComponent } from './templates/login-no-auth/login-no-auth.component';
 import { SidebarNoAuthComponent } from './templates/sidebar-no-auth/sidebar-no-auth.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RouterModule, Routes } from '@angular/router';
+import { HomeComponent } from './pages/home/home.component';
+import { SupportComponent } from './pages/support/support.component';
+import { PagenotfoundComponent } from './pages/pagenotfound/pagenotfound.component';
+
+const appRoutes: Routes = [
+  { path: 'home', component: HomeComponent },
+  { path: 'help-support', component: SupportComponent },
+  //{ path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: '**', component: PagenotfoundComponent },
+];
 
 @NgModule({
   declarations: [
@@ -14,12 +25,21 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     HeaderNoAuthComponent,
     FooterNoAuthComponent,
     LoginNoAuthComponent,
-    SidebarNoAuthComponent
+    SidebarNoAuthComponent,
+    HomeComponent,
+    SupportComponent,
+    PagenotfoundComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
+    RouterModule.forRoot(
+      appRoutes, {
+        scrollPositionRestoration: 'enabled',
+        enableTracing: false,
+      }
+    ),
   ],
   providers: [],
   bootstrap: [AppComponent]
