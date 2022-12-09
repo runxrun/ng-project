@@ -1,3 +1,6 @@
+
+$primary: #202020;
+
 $bg-background: #393939;
 $secondary_color: #F7941D;
 $star-rating: #FF9900;
@@ -50,4 +53,31 @@ $star-rating: #FF9900;
 
 .text-star-rating {
   color: $star-rating;
+}
+
+
+
+.btn-primary {
+  background-color: $primary !important;
+  border-color: $primary !important;
+}
+
+.btn-primary {
+  &:active {
+      box-shadow: 0 0 0 0.25rem rgba(20, 20, 20, 0.5);
+
+      &:focus {
+          box-shadow: 0 0 0 0.25rem rgba(20, 20, 20, 0.5);
+      }
+  }
+
+  &:focus-within,
+  &:target,
+  &:focus {
+      box-shadow: 0 0 0 0.25rem rgba(20, 20, 20, 0.5);
+  }
+}
+
+.border-primary {
+  border-color: $primary !important;
 }

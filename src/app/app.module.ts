@@ -22,6 +22,7 @@ import { ResultHotelComponent } from './pages/hotel/result-hotel/result-hotel.co
 import { DescriptionHotelComponent } from './pages/hotel/description-hotel/description-hotel.component';
 import { HotelImagesGalleryComponent } from './components/hotel-images-gallery/hotel-images-gallery.component';
 import lightGallery from 'lightgallery';
+import { HotelRatesComponent } from './components/hotel-rates/hotel-rates.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import lightGallery from 'lightgallery';
     ResultHotelComponent,
     DescriptionHotelComponent,
     HotelImagesGalleryComponent,
+    HotelRatesComponent,
   ],
   imports: [
     BrowserModule,
