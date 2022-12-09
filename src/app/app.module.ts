@@ -13,6 +13,11 @@ import { PagenotfoundComponent } from './pages/pagenotfound/pagenotfound.compone
 import { RouterlinkRoutingModule } from './routerlink/routerlink-routing.module';
 import { ContractComponent } from './pages/contract/contract.component';
 import { MultiLanguagesComponent } from './templates/multi-languages/multi-languages.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { TtkCalendarComponent } from './components/ttk-calendar/ttk-calendar.component';
+import { SearchHotelsComponent } from './components/search-hotels/search-hotels.component';
+import { CarouselCdkComponent } from './components/carousel-cdk/carousel-cdk.component';
+import { CarouselModule } from 'ng-carousel-cdk';
 
 @NgModule({
   declarations: [
@@ -26,12 +31,17 @@ import { MultiLanguagesComponent } from './templates/multi-languages/multi-langu
     PagenotfoundComponent,
     ContractComponent,
     MultiLanguagesComponent,
+    TtkCalendarComponent,
+    SearchHotelsComponent,
+    CarouselCdkComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
     RouterlinkRoutingModule,
+    NgbModule,
+    CarouselModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

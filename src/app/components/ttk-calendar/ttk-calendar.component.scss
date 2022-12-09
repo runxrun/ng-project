@@ -1,0 +1,131 @@
+.dp-hidden {
+    width: 0;
+    margin: 0;
+    border: none;
+    padding: 0;
+    font-family: 'Inter', 'Sarabun', Arial, serif;
+    font-size: 0.9rem;
+}
+
+.custom-day {
+    text-align: center;
+    padding: 0.185rem 0.25rem;
+    display: inline-block;
+    height: 2.75rem;
+    width: 2.75rem;
+}
+
+
+.custom-day:hover {
+    background-color: rgba(0, 0, 0, 0.2) !important;
+    color: white !important;
+}
+
+
+@media only screen and (max-width: 1024px) {
+
+    .class-custom::ng-deep {
+        .ngb-dp-months {
+            flex-wrap: wrap;
+        }
+
+        .ngb-dp-month {
+            width: 100%;
+        }
+        .ngb-dp-months .ngb-dp-month:last-child{
+            display: none;
+        }
+    }
+
+
+
+}
+
+
+.class-custom::ng-deep {
+
+
+
+
+    .ngb-dp-arrow {
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
+        padding-top: 1rem;
+    }
+
+    .ngb-dp-navigation-select {
+        display: none;
+    }
+
+    .ngb-dp-header {
+        background-color: transparent;
+        height: 20px;
+    }
+
+    .btn-link {
+        color: #000;
+    }
+
+    .ngb-dp-month-name {
+        background-color: transparent;
+        margin: -0.2rem 0 0.8rem 0 !important;
+        font-size: 1.0rem;
+    }
+    .ngb-dp-weekdays {
+        background-color: transparent;
+    }
+
+    .ngb-dp-weekday {
+        font-size: 0.8rem !important;
+        font-weight: 400 !important;
+        height: 2.00rem !important;
+        color: #595959 !important;
+    }
+
+    .ngb-dp-month-name {
+        margin: 1rem 0rem 1rem 0rem;
+        font-weight: bold;
+        font-style: normal;
+    }
+
+    .ngb-dp-weekday {
+        font-weight: bold;
+        font-style: normal;
+        height: 2.75rem;
+        width: 2.75rem;
+    }
+
+    .ngb-dp-day {
+        height: 2.75rem;
+        width: 2.75rem;
+    }
+
+    .range {
+        background-color: #dbdbdb;
+        border-radius: 0%;
+        color: #202020;
+
+        &:not(.faded).from-date {
+            border-top-left-radius: 50%;
+            border-bottom-left-radius: 50%;
+
+            div {
+                border-radius: 50%;
+                background-color: rgb(0 0 0) !important;
+                color: white;
+            }
+        }
+
+        &:not(.faded).to-date {
+            border-top-right-radius: 50%;
+            border-bottom-right-radius: 50%;
+
+            div {
+                border-radius: 50%;
+                background-color: rgb(0 0 0) !important;
+                color: white;
+            }
+        }
+    }
+
+}

@@ -1,22 +1,48 @@
+$bg-background: #393939;
+$secondary_color: #F7941D;
 
 .bg-body-background {
-    background-color: #393939;
-    font-family: 'Inter', 'Sarabun', 'Noto Sans SC', Arial;
-  }
+  background-color: $bg-background;
+  font-family: 'Inter', 'Sarabun', 'Noto Sans SC', Arial;
+}
 
-  .text-title {
-    font-family: 'PT Serif', 'Kanit', 'Noto Serif SC', Arial;
-  }
+.text-title {
+  font-family: 'PT Serif', 'Kanit', 'Noto Serif SC', Arial;
+}
 
-  .fs-7 {
-    font-size: 0.9rem;
-  }
+.fs-7 {
+  font-size: 0.9rem;
+}
 
-  .fs-8 {
-    font-size: 0.8rem;
-  }
+.fs-8 {
+  font-size: 0.8rem;
+}
 
-  .fs-9 {
-    font-size: 0.7rem;
-  }
+.fs-9 {
+  font-size: 0.7rem;
+}
 
+
+.rn-bgcover {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.hover-zoom-effect {
+  transition: all 0.3s;
+}
+
+.hover-zoom-effect a {
+  transition: all 0.3s;
+  transform: scale(1.0);
+}
+
+.hover-zoom-effect:hover a {
+  transform: scale(1.02);
+}
+
+
+.bg-rn-secondary {
+  background-color: $secondary_color;
+}

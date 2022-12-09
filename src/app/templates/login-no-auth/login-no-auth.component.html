@@ -1,4 +1,61 @@
 <!-- Modal -->
+
+<div class="modal fade" id="boxLoginModal" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered rounded-1">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-6 text-title fw-bold text-dark">Sign in to your account</h1>
+                <button type="button" class="btn-close shadow-none border-0" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+                <div class="p-3">
+                    <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm.value)">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text"><i class="fa-solid fa-user"></i></span>
+                            <input type="text" name="log_username" class="form-control py-2 fs-7"
+                                placeholder="Email or Username" autocomplete="off" required ngModel>
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text"><i class="fa-solid fa-key"></i></span>
+                            <input [type]="fieldTextType ? 'password' : 'text'" name="log_password"
+                                class="form-control py-2 fs-7" placeholder="Password" autocomplete="off" required
+                                ngModel>
+                            <button type="button" class="input-group-text bg-white" (click)="toggleFieldTextType()">
+                                <i class="fa-solid" [ngClass]="[fieldTextType ? 'fa-eye-slash':'fa-eye']"></i>
+                            </button>
+                        </div>
+                        <div class="mb-3">
+                            <button type="submit" class="btn btn-primary fs-7 fw-bold rounded-1 w-100"
+                                [disabled]="!loginForm.valid">
+                                SIGN IN
+                            </button>
+                        </div>
+                        <div class="">
+                            <a href="javascript: void(0);" class="fs-8 text-secondary text-decoration-none">
+                                Forgot password?
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="border-top p-3">
+                <div class="row g-2 justify-content-start">
+                    <div class="col-auto">
+                        <button type="button" class="btn btn-outline-secondary fs-8 rounded-1">
+                            Join us
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--
 <div class="modal fade" id="boxLoginModal" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false"
     aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered rounded-1">
@@ -87,4 +144,4 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
