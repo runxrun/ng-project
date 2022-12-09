@@ -1,0 +1,32 @@
+<div class="bg-white border rounded-1 mb-3">
+    <div class="bg-light border-bottom py-2 px-3">
+        <div class="fs-7 fw-bold text-dark">Today deals</div>
+    </div>
+    <div class="p-3">
+        <div class="pb-1 fs-8 text-secondary">Enter promotion code</div>
+        <div class="row g-0">
+            <div class="col-9">
+                <input type="text" class="form-control w-100 rounded-0 fs-8 text-center fw-bold" value="PRODEC22" />
+            </div>
+            <div class="col-3">
+                <button class="btn btn-primary w-100 rounded-0 fs-8">Apply</button>
+            </div>
+        </div>
+        <ng-container>
+            <div class="pt-2">
+                <div class="text-success fs-8 fw-bold d-block">
+                    Promotion code is activated
+                </div>
+                <div class="fs-8 text-secondary">
+                    Congratulations, You get 10% discount.
+                </div>
+                <div class="text-warning fs-8 fw-bold d-none">
+                    Promotion code is expired
+                </div>
+                <div class="text-danger fs-8 fw-bold d-none">
+                    Promotion code is invalid
+                </div>
+            </div>
+        </ng-container>
+    </div>
+</div>

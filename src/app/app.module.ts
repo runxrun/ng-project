@@ -23,6 +23,10 @@ import { DescriptionHotelComponent } from './pages/hotel/description-hotel/descr
 import { HotelImagesGalleryComponent } from './components/hotel-images-gallery/hotel-images-gallery.component';
 import lightGallery from 'lightgallery';
 import { HotelRatesComponent } from './components/hotel-rates/hotel-rates.component';
+import { PaxDetailComponent } from './pages/pax-detail/pax-detail.component';
+import { BookingdetailComponent } from './components/bookingdetail/bookingdetail.component';
+import { PromocodeComponent } from './components/promocode/promocode.component';
+import { AggregateComponent } from './components/aggregate/aggregate.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +47,10 @@ import { HotelRatesComponent } from './components/hotel-rates/hotel-rates.compon
     DescriptionHotelComponent,
     HotelImagesGalleryComponent,
     HotelRatesComponent,
+    PaxDetailComponent,
+    BookingdetailComponent,
+    PromocodeComponent,
+    AggregateComponent,
   ],
   imports: [
     BrowserModule,
