@@ -1,0 +1,112 @@
+<div class="bg-light border-top py-4">
+    <div class="container">
+
+
+
+
+
+        <div class="bg-white border-bottom rounded py-3 ps-4 pe-3">
+            <div class="row justify-content-between align-items-center">
+                <div class="col-12 col-md-10">
+                    <div class="row">
+                        <div class="col-12 col-md-3">
+                            <div class="fs-8 text-secondary">Destination</div>
+                            <div class="fs-7 text-dark"><b>Bangkok, Thailand</b></div>
+                        </div>
+                        <div class="col-12 col-md-3">
+                            <div class="fs-8 text-secondary">Stay . Fri - Sun, 2 Nights</div>
+                            <div class="fs-7 text-dark"><b>23 - 25 Dec 2022</b></div>
+                        </div>
+                        <div class="col-12 col-md-3">
+                            <div class="fs-8 text-secondary">Guest in 2 Rooms</div>
+                            <div class="fs-7 text-dark"><b>4 Adult(s) and 1 Children</b></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-2">
+                    <div class="p-2 w-100">
+                        <button class="btn btn-sm btn-primary py-2 px-4 w-100">Modify</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <ng-container *ngFor="let hotels of hotel">
+
+            <div class="d-flex bg-white mt-3 border-bottom">
+                <div class="col-5 col-lg-3">
+                    <a href="javascript: void(0);" routerLink="/hotel/description/" class="d-block rn-bgcover h-100"
+                        style="background-image: url('{{ hotels.hotelimage }}');">
+                        <img src="/assets/images/image-ratio-4-3.gif" class="img-fluid ">
+                    </a>
+                </div>
+                <div class="col-7 col-lg-9 d-flex flex-wrap">
+                    <div class="col-12 col-lg-9 p-3">
+
+                        <div class="d-flex flex-wrap justify-content-between">
+                            <div class="row align-items-center">
+                                <div class="pb-2 col-auto">
+                                    <a href="javascript: void(0);" routerLink="/hotel/description/"
+                                        class="h4 text-decoration-none text-dark text-title fw-bold">
+                                        {{ hotels.hotelname }}
+                                    </a>
+                                </div>
+                                <div class="pb-2 col-auto d-flex fs-8 text-star-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="pb-3">
+                                <button class="btn btn-danger py-1 px-2 rounded-1 fs-9">
+                                    Available
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="d-flex pb-3">
+                            <div class="pe-1 fs-7 text-secondary"><i class="fas fa-map-marker-alt"></i></div>
+                            <div class="ps-1 fs-7 text-secondary">448/892, Ratchadapisek, Bangkok, Thailand</div>
+                        </div>
+                        <div class="pt-2">
+                            <div class="d-flex flex-wrap fs-6 px-0 text-secondary">
+                                <div class="pe-3"><i class="fas fa-dumbbell" title="Fitness Center"></i></div>
+                                <div class="pe-3"><i class="fas fa-utensils" title="Restaurant"></i></div>
+                                <div class="pe-3"><i class="fas fa-parking" title="Parking"></i></div>
+                                <div class="pe-3"><i class="fas fa-wifi" title="WIFI"></i></div>
+                                <div class="pe-3"><i class="fas fa-tshirt" title="Loundry"></i></div>
+                                <div class="pe-3"><i class="fas fa-swimmer" title="Swimming Pool"></i></div>
+                                <div class="pe-3"><i class="fas fa-concierge-bell" title="Room Service"></i></div>
+                                <div class="pe-3"><i class="fas fa-spa" title="Spa &amp; Wellness Center"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-3 pb-3 border-start">
+                        <div class="pt-3 px-3 fs-8 text-secondary text-start text-md-center">
+                            Average Rate
+                        </div>
+                        <div class="pt-2 px-3">
+                            <div class="text-primary fw-bold text-start text-md-center">
+                                <small class="fs-6 pe-2">THB</small>
+                                <span class="h5 fw-bold">1,368.81</span>
+                            </div>
+                        </div>
+                        <div class="pt-3 px-3"><button class="btn py-2 btn-sm w-100 btn-primary" routerLink="/hotel/description">View rates</button></div>
+                        <div class="pt-1 px-3 fs-8 text-secondary text-start text-md-center">Room/Night (Incl. taxes
+                            &amp;
+                            fees)</div>
+                    </div>
+                </div>
+            </div>
+
+        </ng-container>
+
+
+
+
+    </div>
+</div>

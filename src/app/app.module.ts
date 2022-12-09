@@ -18,6 +18,10 @@ import { TtkCalendarComponent } from './components/ttk-calendar/ttk-calendar.com
 import { SearchHotelsComponent } from './components/search-hotels/search-hotels.component';
 import { CarouselCdkComponent } from './components/carousel-cdk/carousel-cdk.component';
 import { CarouselModule } from 'ng-carousel-cdk';
+import { ResultHotelComponent } from './pages/hotel/result-hotel/result-hotel.component';
+import { DescriptionHotelComponent } from './pages/hotel/description-hotel/description-hotel.component';
+import { HotelImagesGalleryComponent } from './components/hotel-images-gallery/hotel-images-gallery.component';
+import lightGallery from 'lightgallery';
 
 @NgModule({
   declarations: [
@@ -34,6 +38,9 @@ import { CarouselModule } from 'ng-carousel-cdk';
     TtkCalendarComponent,
     SearchHotelsComponent,
     CarouselCdkComponent,
+    ResultHotelComponent,
+    DescriptionHotelComponent,
+    HotelImagesGalleryComponent,
   ],
   imports: [
     BrowserModule,

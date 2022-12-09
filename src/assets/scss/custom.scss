@@ -1,5 +1,6 @@
 $bg-background: #393939;
 $secondary_color: #F7941D;
+$star-rating: #FF9900;
 
 .bg-body-background {
   background-color: $bg-background;
@@ -45,4 +46,8 @@ $secondary_color: #F7941D;
 
 .bg-rn-secondary {
   background-color: $secondary_color;
+}
+
+.text-star-rating {
+  color: $star-rating;
 }
