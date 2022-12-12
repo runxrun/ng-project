@@ -10,11 +10,11 @@ import { SupportComponent } from '../pages/support/support.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent, pathMatch: 'full' },
-  { path: 'hotel/result', component: ResultHotelComponent, pathMatch: 'full' },
-  { path: 'hotel/description', component: DescriptionHotelComponent, pathMatch: 'full' },
-  { path: 'paxdetail', component: PaxDetailComponent, pathMatch: 'full' },
-  { path: 'contract', component: ContractComponent, pathMatch: 'full' },
-  { path: 'help-support', component: SupportComponent, pathMatch: 'full' },
+  { path: 'hotel/result', component: ResultHotelComponent },
+  { path: 'hotel/description', component: DescriptionHotelComponent },
+  { path: 'paxdetail', component: PaxDetailComponent },
+  { path: 'contract', component: ContractComponent },
+  { path: 'help-support', component: SupportComponent },
   { path: '**', component: PagenotfoundComponent },
 ];
 
