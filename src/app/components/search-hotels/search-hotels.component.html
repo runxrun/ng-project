@@ -39,21 +39,76 @@
             </div>
         </div>
     </div>
-    <div class="pt-2 pb-3 px-4 border-top bg-light rounded-bottom">
+    <div class="pt-2 px-4 border-top bg-light rounded-bottom">
         <div class="row">
-            <div class="col-auto">
-                <button class="btn p-0 border-0 w-100 text-start">
-                    <div class="d-flex">
-                        <div class="pe-2 fs-8 text-secondary">
-                            <i class="fas fa-bed"></i>
+            <div class="pb-3 col-12 col-md-auto d-none">
+
+                <div class="position-relative">
+                    <button class="btn p-0 border-0 w-100 text-start" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseWidthExample" aria-expanded="false"
+                        aria-controls="collapseWidthExample">
+                        <div class="d-flex">
+                            <div class="pe-2 fs-8 text-secondary">
+                                <i class="fas fa-bed"></i>
+                            </div>
+                            <div class="ps-1 fs-8 text-dark">
+                                1 Room, 2 Adults
+                            </div>
                         </div>
-                        <div class="ps-1 fs-8 text-dark">
-                            1 Room, 2 Adults
+                    </button>
+
+                    <div class="position-absolute collapse" id="collapseWidthExample"
+                        style="margin: 0rem  0rem 0rem -1.5rem; min-width: 320px; width: calc(100% + 3rem); z-index: 3;">
+                        <div class="bg-light shadow-sm rounded-bottom">
+                            <div class="py-3 px-4">
+                                <div class="border-top pt-2 pb-3 border-top">
+                                    <div class="fs-7 text-secondary">
+                                        Title
+                                    </div>
+                                </div>
+                                <div class="fs-7 text-secondary">
+                                    This is some placeholder content for a horizontal collapse. It's hidden by default
+                                    and shown when triggered. This is some placeholder content for a horizontal
+                                    collapse. It's hidden by default and shown when triggered.
+                                </div>
+                            </div>
+                            <div class="border-top d-flex justify-content-end">
+                                <div class="py-2 px-2">
+                                    <button class="btn btn-dark rounded-1" data-bs-target="#collapseWidthExample"
+                                        data-bs-toggle="collapse">
+                                        <div class="fs-8">Done</div>
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </button>
+                </div>
             </div>
-            <div class="col-auto">
+            <div class="pb-3 col-auto">
+                <div class="dropdown">
+                    <button type="button" id="ddwn" class="btn p-0 border-0 w-100 text-start" data-bs-toggle="dropdown">
+                        <div class="d-flex">
+                            <div class="pe-2 fs-8 text-secondary">
+                                <i class="fas fa-bed"></i>
+                            </div>
+                            <div class="ps-1 fs-8 text-dark">
+                                1 Room, 2 Adults
+                            </div>
+                        </div>
+                    </button>
+                    <!-- <div class="dropdown-menu mt-2" id="dropdown_detail" [btn]="'ddwn'" appDropdownClickInside> -->
+                    <div class="dropdown-menu mt-2">
+                        <div class="py-2 px-4" style="width: 320px;">
+                            <div class="fs-7 text-secondary">
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi labore, accusantium
+                                error iure impedit repudiandae dolorem est provident possimus et aperiam, neque
+                                reiciendis ex qui sit asperiores esse officiis voluptas.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pb-3 col-auto">
                 <button class="btn p-0 border-0 w-100 text-start">
                     <div class="d-flex">
                         <div class="pe-2 fs-8 text-secondary">

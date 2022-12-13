@@ -27,6 +27,7 @@ import { BookingdetailComponent } from './components/bookingdetail/bookingdetail
 import { PromocodeComponent } from './components/promocode/promocode.component';
 import { AggregateComponent } from './components/aggregate/aggregate.component';
 import { AutocompleteLibModule } from 'angular-ng-autocomplete';
+import { DropdownClickInsideDirective } from './directive/dropdown-click-inside.directive';
 
 @NgModule({
   declarations: [
@@ -51,6 +52,7 @@ import { AutocompleteLibModule } from 'angular-ng-autocomplete';
     BookingdetailComponent,
     PromocodeComponent,
     AggregateComponent,
+    DropdownClickInsideDirective,
   ],
   imports: [
     BrowserModule,

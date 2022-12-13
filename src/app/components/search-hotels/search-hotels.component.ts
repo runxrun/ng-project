@@ -43,4 +43,11 @@ export class SearchHotelsComponent {
   onFocused(e:any) {
     // do something
   }
+
+
+
+
+
+
+
 }
