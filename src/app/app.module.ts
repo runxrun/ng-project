@@ -21,12 +21,12 @@ import { CarouselModule } from 'ng-carousel-cdk';
 import { ResultHotelComponent } from './pages/hotel/result-hotel/result-hotel.component';
 import { DescriptionHotelComponent } from './pages/hotel/description-hotel/description-hotel.component';
 import { HotelImagesGalleryComponent } from './components/hotel-images-gallery/hotel-images-gallery.component';
-import lightGallery from 'lightgallery';
 import { HotelRatesComponent } from './components/hotel-rates/hotel-rates.component';
 import { PaxDetailComponent } from './pages/pax-detail/pax-detail.component';
 import { BookingdetailComponent } from './components/bookingdetail/bookingdetail.component';
 import { PromocodeComponent } from './components/promocode/promocode.component';
 import { AggregateComponent } from './components/aggregate/aggregate.component';
+import { AutocompleteLibModule } from 'angular-ng-autocomplete';
 
 @NgModule({
   declarations: [
@@ -59,6 +59,7 @@ import { AggregateComponent } from './components/aggregate/aggregate.component';
     RouterlinkRoutingModule,
     NgbModule,
     CarouselModule,
+    AutocompleteLibModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

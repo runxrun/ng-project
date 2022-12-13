@@ -1,0 +1,68 @@
+.ng-autocomplete {
+	&::ng-deep {
+		.autocomplete-container {
+			box-shadow: none;
+			height: auto;
+			.input-container {
+				input {
+					padding: 0.25rem 0;
+					font-size: 1.25rem;
+					font-weight: bold;
+					color: #000000;
+					height: auto;
+					line-height: normal;
+					cursor: pointer;
+				}
+			}
+			.suggestions-container {
+				margin: 0.75rem -0rem 0rem -1.50rem;
+				border-bottom-left-radius: 0.25rem;
+				border-bottom-right-radius: 0.25rem;
+				border: 0px;
+				box-shadow: none;
+				width: calc(100% + 1.50rem);
+				z-index: 2;
+				ul {
+					li {
+						a {
+							font-size: 0.9rem;
+							font-weight: bold;
+							color: #202020;
+							cursor: pointer;
+							padding: 0.75rem 1.50rem;
+							b {
+								color: #ffc107;
+							}
+						}
+					}
+					&::-webkit-scrollbar {
+						width: 2px;
+					}
+					&::-webkit-scrollbar-track {
+						background: #f1f1f1;
+					}
+					&::-webkit-scrollbar-thumb {
+						background: #d7d7d7;
+						&:hover {
+							background: #555;
+						}
+					}
+				}
+			}
+			.not-found {
+				position: absolute;
+				box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 5px;
+				margin: 0.75rem -0rem 0rem -1.50rem;
+				border-bottom-left-radius: 0.25rem;
+				border-bottom-right-radius: 0.25rem;
+				border: 0px;
+				width: calc(100% + 1.50rem);
+				z-index: 1;
+				div {
+					text-align: center;
+					padding: 1.5rem;
+				}
+			}
+		}
+	}
+}

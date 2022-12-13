@@ -1,7 +1,7 @@
 <div class="bg-white rounded w-100">
     <div class="p-4">
-        <div class="row align-items-end">
-            <div class="pb-4 pb-md-0 col-12 col-md-5">
+        <div class="row">
+            <div class="position-relative pb-4 pb-md-0 col-12 col-md-5">
                 <div class="d-flex pb-2">
                     <div class="pe-2 fs-8 text-warning">
                         <i class="fas fa-map-marker-alt"></i>
@@ -11,17 +11,27 @@
                     </div>
                 </div>
                 <div>
-                    <input type="text" class="form-control p-0 border-0 rounded-0 shadow-none fs-5 fw-bold text-dark"
-                        placeholder="Enter Destination">
+                    <ng-autocomplete [data]="countries" [searchKeyword]="keyword" placeholder="Enter destination"
+                        (selected)='selectEvent($event)' (inputChanged)='onChangeSearch($event)'
+                        (inputFocused)='onFocused($event)' historyIdentifier="countries" [itemTemplate]="itemTemplate"
+                        [notFoundTemplate]="notFoundTemplate">
+                    </ng-autocomplete>
+                    <ng-template #itemTemplate let-item>
+                        <a class="d-flex">
+                            <div class="pe-2 text-warning"><i class="fas fa-map-marker-alt"></i></div>
+                            <div class="ps-1" [innerHTML]="item.name"></div>
+                        </a>
+                    </ng-template>
+                    <ng-template #notFoundTemplate let-notFound>
+                        <div [innerHTML]="notFound"></div>
+                    </ng-template>
                 </div>
             </div>
             <div class="pb-4 pb-md-0 col-12 col-md-5">
                 <app-ttk-calendar></app-ttk-calendar>
             </div>
             <div class="pb-2 col-12 col-md-2">
-                <button
-                    class="btn btn-primary w-100 fs-7 rounded-pill"
-                    routerLink="/hotel/result">
+                <button class="btn btn-primary w-100 fs-7 rounded-pill" routerLink="/hotel/result">
                     Find
                 </button>
             </div>
