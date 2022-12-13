@@ -17,9 +17,11 @@
                         [notFoundTemplate]="notFoundTemplate">
                     </ng-autocomplete>
                     <ng-template #itemTemplate let-item>
-                        <a class="d-flex">
-                            <div class="pe-2 text-warning"><i class="fas fa-map-marker-alt"></i></div>
-                            <div class="ps-1" [innerHTML]="item.name"></div>
+                        <a>
+                            <div class="d-flex">
+                                <div class="pe-2 text-warning"><i class="fas fa-map-marker-alt"></i></div>
+                                <div class="ps-1" [innerHTML]="item.name"></div>
+                            </div>
                         </a>
                     </ng-template>
                     <ng-template #notFoundTemplate let-notFound>
