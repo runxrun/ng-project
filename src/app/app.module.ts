@@ -28,6 +28,7 @@ import { PromocodeComponent } from './components/promocode/promocode.component';
 import { AggregateComponent } from './components/aggregate/aggregate.component';
 import { AutocompleteLibModule } from 'angular-ng-autocomplete';
 import { DropdownClickInsideDirective } from './directive/dropdown-click-inside.directive';
+import { TtkGuestinroomComponent } from './components/ttk-guestinroom/ttk-guestinroom.component';
 
 @NgModule({
   declarations: [
@@ -53,6 +54,7 @@ import { DropdownClickInsideDirective } from './directive/dropdown-click-inside.
     PromocodeComponent,
     AggregateComponent,
     DropdownClickInsideDirective,
+    TtkGuestinroomComponent,
   ],
   imports: [
     BrowserModule,

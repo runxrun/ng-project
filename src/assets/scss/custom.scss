@@ -1,9 +1,12 @@
 
 $primary: #202020;
+$identity: #e7a000;
 
 $bg-background: #393939;
-$secondary_color: #F7941D;
+$secondary-color: #F7941D;
 $star-rating: #FF9900;
+
+
 
 .bg-body-background {
   background-color: $bg-background;
@@ -13,6 +16,8 @@ $star-rating: #FF9900;
 .text-title {
   font-family: 'PT Serif', 'Kanit', 'Noto Serif SC', Arial;
 }
+
+.text-identity{ color: $identity; }
 
 .fs-7 {
   font-size: 0.9rem;
@@ -48,7 +53,7 @@ $star-rating: #FF9900;
 
 
 .bg-rn-secondary {
-  background-color: $secondary_color;
+  background-color: $secondary-color;
 }
 
 .text-star-rating {

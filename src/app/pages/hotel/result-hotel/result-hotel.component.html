@@ -1,10 +1,7 @@
+<!-- <app-search-hotels></app-search-hotels> -->
+
 <div class="bg-light border-top py-4">
     <div class="container">
-
-
-
-
-
         <div class="bg-white border-bottom rounded py-3 ps-4 pe-3">
             <div class="row justify-content-between align-items-center">
                 <div class="col-12 col-lg-10">
@@ -27,13 +24,31 @@
                 </div>
                 <div class="col-12 col-lg-2">
                     <div class="p-2 w-100">
-                        <button class="btn btn-sm btn-primary py-2 px-4 w-100" routerLink="/">Modify</button>
+                        <button role="button" class="btn btn-sm btn-primary py-2 px-4 w-100" data-bs-toggle="modal"
+                            data-bs-target="#ModalModifySearch">
+                            Modify
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
 
-
+        <div class="modal fade" id="ModalModifySearch" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-fullscreen-lg-down">
+                <div class="modal-content">
+                    <div class="modal-header d-flex d-lg-none">
+                        <h1 class="modal-title fs-5">Modify Search</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body p-0 bg-light">
+                        <app-search-hotels></app-search-hotels>
+                    </div>
+                    <div class="modal-footer d-flex d-lg-none">
+                        <button type="button" class="btn btn-dark fs-8 rounded-1" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
         <ng-container *ngFor="let hotels of hotel">
@@ -76,14 +91,18 @@
                         </div>
                         <div class="pt-2">
                             <div class="d-flex flex-wrap fs-6 px-0">
-                                <div class="pe-3 text-dark opacity-25"><i class="fas fa-dumbbell" title="Fitness Center"></i></div>
+                                <div class="pe-3 text-dark opacity-25"><i class="fas fa-dumbbell"
+                                        title="Fitness Center"></i></div>
                                 <div class="pe-3 text-dark"><i class="fas fa-utensils" title="Restaurant"></i></div>
                                 <div class="pe-3 text-dark"><i class="fas fa-parking" title="Parking"></i></div>
                                 <div class="pe-3 text-dark"><i class="fas fa-wifi" title="WIFI"></i></div>
-                                <div class="pe-3 text-dark opacity-25"><i class="fas fa-tshirt" title="Loundry"></i></div>
+                                <div class="pe-3 text-dark opacity-25"><i class="fas fa-tshirt" title="Loundry"></i>
+                                </div>
                                 <div class="pe-3 text-dark"><i class="fas fa-swimmer" title="Swimming Pool"></i></div>
-                                <div class="pe-3 text-dark opacity-25"><i class="fas fa-concierge-bell" title="Room Service"></i></div>
-                                <div class="pe-3 text-dark opacity-25"><i class="fas fa-spa" title="Spa &amp; Wellness Center"></i></div>
+                                <div class="pe-3 text-dark opacity-25"><i class="fas fa-concierge-bell"
+                                        title="Room Service"></i></div>
+                                <div class="pe-3 text-dark opacity-25"><i class="fas fa-spa"
+                                        title="Spa &amp; Wellness Center"></i></div>
                             </div>
                         </div>
                     </div>
@@ -91,16 +110,20 @@
                         <div class="pt-3 px-3 fs-8 text-secondary text-start text-md-center">
                             Average Rate
                         </div>
-                        <div class="pt-2 px-3">
-                            <div class="text-primary fw-bold text-start text-md-center">
-                                <small class="fs-6 pe-2">THB</small>
-                                <span class="h5 fw-bold">1,368.81</span>
+                        <div class="pt-0 px-3">
+                            <div class="text-title text-dark fw-bold text-start text-md-center">
+                                <small class="pe-1 fs-6">THB</small>
+                                <span class="ps-1 fs-5 fw-bold">1,368.81</span>
                             </div>
                         </div>
-                        <div class="pt-3 px-3"><button class="btn py-2 btn-sm w-100 btn-primary" routerLink="/hotel/description">View rates</button></div>
-                        <div class="pt-1 px-3 fs-8 text-secondary text-start text-md-center">Room/Night (Incl. taxes
-                            &amp;
-                            fees)</div>
+                        <div class="pt-3 px-3">
+                            <button class="btn py-2 btn-sm w-100 btn-primary" routerLink="/hotel/description">
+                                View rates
+                            </button>
+                        </div>
+                        <div class="pt-1 px-3 fs-8 text-secondary text-start text-md-center">
+                            Room/Night (Incl. taxes &amp; fees)
+                        </div>
                     </div>
                 </div>
             </div>
