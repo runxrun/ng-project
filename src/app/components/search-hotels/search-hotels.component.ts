@@ -30,8 +30,9 @@ export class SearchHotelsComponent {
       name: 'Koh Samui',
     },
   ];
-    selectEvent(item:any) {
-      console.log(item);
+
+  selectEvent(item: any) {
+    console.log(item);
     // do something with selected item
   }
 
@@ -40,7 +41,7 @@ export class SearchHotelsComponent {
     // And reassign the 'data' which is binded to 'data' property.
   }
 
-  onFocused(e:any) {
+  onFocused(e: any) {
     // do something
   }
 

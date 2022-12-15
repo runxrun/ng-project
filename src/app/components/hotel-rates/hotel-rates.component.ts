@@ -8,13 +8,16 @@ import { Component } from '@angular/core';
 export class HotelRatesComponent {
   users = [
     {
-      name: 'A',
+      roomname: 'Bedroom Deluxe Double',
+      imgroom: 'https://www.jtbtrip.com/ImageData/Hotel/w22_hotel_by_burasari-room2.jpg',
     },
     {
-      name: 'B',
+      roomname: 'Bedroom Deluxe Twin',
+      imgroom: 'https://www.jtbtrip.com/ImageData/Hotel/w22_hotel_by_burasari-room5.jpg',
     },
     {
-      name: 'C',
+      roomname: 'Bedroom Supreior Double',
+      imgroom: 'https://www.jtbtrip.com/ImageData/Hotel/w22_hotel_by_burasari-room1.jpg',
     },
   ];
 }
