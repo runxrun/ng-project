@@ -1,4 +1,4 @@
-<button class="btn py-1 px-0 border-0 shadow-none">
+<button class="btn py-1 px-0 border-0 shadow-none" data-bs-toggle="modal" data-bs-target="#FilterHotelsModal">
     <div class="d-flex align-items-center">
         <div class="pe-2 fs-7 text-secondary">
             <i class="fas fa-list-ul"></i>
@@ -8,3 +8,90 @@
         </div>
     </div>
 </button>
+
+
+<div class="modal fade" id="FilterHotelsModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl modal-fullscreen-lg-down">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Filter Hotels</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+                <div class="row">
+                    <div class="pb-3 col-12 col-md-4 col-xl-3">
+                        <div class="pb-3">
+                            <div class="fs-6 fw-bold text-dark text-title text-uppercase">
+                                Facility
+                            </div>
+                        </div>
+                        <div class="row gy-1 gx-2">
+                            <ng-container *ngFor="let f_facility of filterfacilities; index as i;">
+                                <div class="col-12">
+                                    <div class="form-check fs-7 text-dark">
+                                        <input class="form-check-input" type="checkbox" value="" [id]="'fac'+i">
+                                        <label class="form-check-label" [for]="'fac'+i">
+                                            {{ f_facility.name }}
+                                        </label>
+                                    </div>
+                                </div>
+                            </ng-container>
+                        </div>
+                    </div>
+                    <div class="pb-3 col-12 col-md-4 col-xl-6">
+                        <div class="d-block d-md-none">
+                            <hr class="border-top border-2 border-dark opacity-100 p-0">
+                        </div>
+                        <div class="pb-3">
+                            <div class="fs-6 fw-bold text-dark text-title text-uppercase">
+                                Location
+                            </div>
+                        </div>
+                        <div class="row gy-1 gx-2">
+                            <ng-container *ngFor="let f_location of filterlocation; index as i;">
+                                <div class="col-12 col-xl-6">
+                                    <div class="form-check fs-7 text-dark">
+                                        <input class="form-check-input" type="checkbox" value="" [id]="'loc'+i">
+                                        <label class="form-check-label" [for]="'loc'+i">
+                                            {{ f_location.name }}
+                                        </label>
+                                    </div>
+                                </div>
+                            </ng-container>
+                        </div>
+                    </div>
+                    <div class="pb-3 col-12 col-md-4 col-xl-3">
+                        <div class="d-block d-md-none">
+                            <hr class="border-top border-2 border-dark opacity-100 p-0">
+                        </div>
+                        <div class="pb-3">
+                            <div class="fs-6 fw-bold text-dark text-title text-uppercase">
+                                Hotel Style
+                            </div>
+                        </div>
+                        <div class="row gy-1 gx-2">
+                            <ng-container *ngFor="let f_hotelstyle of filterhotelstyle; index as i;">
+                                <div class="col-12">
+                                    <div class="form-check fs-7 text-dark">
+                                        <input class="form-check-input" type="checkbox" value="" [id]="'style'+i">
+                                        <label class="form-check-label" [for]="'style'+i">
+                                            {{ f_hotelstyle.name }}
+                                        </label>
+                                    </div>
+                                </div>
+                            </ng-container>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-secondary rounded-1 fs-8"
+                    data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-dark rounded-1 fs-8 px-5" data-bs-dismiss="modal">Filter</button>
+            </div>
+        </div>
+    </div>
+</div>

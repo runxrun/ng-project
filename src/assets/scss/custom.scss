@@ -86,3 +86,42 @@ $star-rating: #FF9900;
       box-shadow: 0 0 0 0.25rem rgba(20, 20, 20, 0.5);
   }
 }
+
+.btn-identity {
+  background-color: $identity !important;
+  border-color: $identity !important;
+}
+.btn-identity {
+  &:active {
+      box-shadow: 0 0 0 0.25rem rgba(231, 160, 0, 0.5);
+
+      &:focus {
+          box-shadow: 0 0 0 0.25rem rgba(231, 160, 0, 0.5);
+      }
+  }
+
+  &:focus-within,
+  &:target,
+  &:focus {
+      box-shadow: 0 0 0 0.25rem rgba(231, 160, 0, 0.5);
+  }
+}
+
+
+.rn-pagination .page-link {
+  color: $primary !important;
+}
+
+.rn-pagination .disabled a {
+  color: #a0a0a0 !important;
+}
+
+.rn-pagination .active>.page-link {
+  border-color: $primary !important;
+  background-color: $primary !important;
+  color: #ffffff !important;
+}
+
+.dropdown-item.active, .dropdown-item:active {
+  background-color: $primary !important;
+}
