@@ -1,0 +1,21 @@
+<div class="d-flex pb-2">
+    <div class="pe-2 fs-8 text-identity"><i class="fas fa-map-marker-alt"></i></div>
+    <div class="fs-8 text-secondary">Destination</div>
+</div>
+<div>
+    <ng-autocomplete [data]="countries" [searchKeyword]="keyword" placeholder="Enter destination"
+        (selected)='selectEvent($event)' (inputChanged)='onChangeSearch($event)' (inputFocused)='onFocused($event)'
+        historyIdentifier="countries" [itemTemplate]="itemTemplate" [notFoundTemplate]="notFoundTemplate">
+    </ng-autocomplete>
+    <ng-template #itemTemplate let-item>
+        <a>
+            <div class="d-flex">
+                <div class="pe-2 text-identity"><i class="fas fa-map-marker-alt"></i></div>
+                <div class="ps-1" [innerHTML]="item.name"></div>
+            </div>
+        </a>
+    </ng-template>
+    <ng-template #notFoundTemplate let-notFound>
+        <div [innerHTML]="notFound"></div>
+    </ng-template>
+</div>

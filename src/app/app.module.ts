@@ -29,6 +29,11 @@ import { AggregateComponent } from './components/aggregate/aggregate.component';
 import { AutocompleteLibModule } from 'angular-ng-autocomplete';
 import { DropdownClickInsideDirective } from './directive/dropdown-click-inside.directive';
 import { TtkGuestinroomComponent } from './components/ttk-guestinroom/ttk-guestinroom.component';
+import { TtkAutocompleteDestinationComponent } from './components/ttk-autocomplete-destination/ttk-autocomplete-destination.component';
+import { TtkRecommendedDestinationComponent } from './components/ttk-recommended-destination/ttk-recommended-destination.component';
+import { TtkSortingHotelComponent } from './components/ttk-sorting-hotel/ttk-sorting-hotel.component';
+import { TtkFilterHotelComponent } from './components/ttk-filter-hotel/ttk-filter-hotel.component';
+import { TtkMapHotelComponent } from './components/ttk-map-hotel/ttk-map-hotel.component';
 
 @NgModule({
   declarations: [
@@ -55,6 +60,11 @@ import { TtkGuestinroomComponent } from './components/ttk-guestinroom/ttk-guesti
     AggregateComponent,
     DropdownClickInsideDirective,
     TtkGuestinroomComponent,
+    TtkAutocompleteDestinationComponent,
+    TtkRecommendedDestinationComponent,
+    TtkSortingHotelComponent,
+    TtkFilterHotelComponent,
+    TtkMapHotelComponent,
   ],
   imports: [
     BrowserModule,

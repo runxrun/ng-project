@@ -2,58 +2,100 @@
 
 <div class="bg-light border-top py-4">
     <div class="container">
-        <div class="bg-white border-bottom rounded py-3 ps-4 pe-3">
-            <div class="row justify-content-between align-items-center">
-                <div class="col-12 col-lg-10">
-                    <div class="px-2">
-                        <div class="row">
-                            <div class="pb-2 col-12 col-md-4 col-lg-3">
-                                <div class="fs-8 text-secondary">Destination</div>
-                                <div class="fs-7 text-dark"><b>Bangkok, Thailand</b></div>
+        <div class="pb-2">
+            <div class="bg-white shadow-sm rounded">
+                <div class="py-3 ps-4 pe-3">
+                    <div class="row justify-content-between align-items-center">
+                        <div class="col-12 col-lg-10">
+                            <div class="px-2">
+                                <div class="row">
+                                    <div class="pb-2 col-12 col-md-4 col-lg-3">
+                                        <div class="fs-8 text-secondary">Destination</div>
+                                        <div class="fs-7 text-dark"><b>Bangkok, Thailand</b></div>
+                                    </div>
+                                    <div class="pb-2 col-12 col-md-4 col-lg-3">
+                                        <div class="fs-8 text-secondary">Stay . Fri - Sun, 2 Nights</div>
+                                        <div class="fs-7 text-dark"><b>23 - 25 Dec 2022</b></div>
+                                    </div>
+                                    <div class="pb-2 col-12 col-md-4 col-lg-4">
+                                        <div class="fs-8 text-secondary">Guest in 2 Rooms</div>
+                                        <div class="fs-7 text-dark"><b>4 Adult(s) and 1 Children</b></div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="pb-2 col-12 col-md-4 col-lg-3">
-                                <div class="fs-8 text-secondary">Stay . Fri - Sun, 2 Nights</div>
-                                <div class="fs-7 text-dark"><b>23 - 25 Dec 2022</b></div>
-                            </div>
-                            <div class="pb-2 col-12 col-md-4 col-lg-4">
-                                <div class="fs-8 text-secondary">Guest in 2 Rooms</div>
-                                <div class="fs-7 text-dark"><b>4 Adult(s) and 1 Children</b></div>
+                        </div>
+                        <div class="col-12 col-lg-2">
+                            <div class="p-2 w-100">
+                                <button role="button" class="btn btn-sm btn-primary py-2 px-4 w-100"
+                                    data-bs-toggle="modal" data-bs-target="#ModalModifySearch">
+                                    Modify
+                                </button>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-lg-2">
-                    <div class="p-2 w-100">
-                        <button role="button" class="btn btn-sm btn-primary py-2 px-4 w-100" data-bs-toggle="modal"
-                            data-bs-target="#ModalModifySearch">
-                            Modify
-                        </button>
+                <div class="border-top">
+                    <div class="py-2 px-4">
+                        <div class="row">
+                            <div class="col-auto">
+                                <app-ttk-sorting-hotel></app-ttk-sorting-hotel>
+                            </div>
+                            <div class="col-auto">
+                                <app-ttk-filter-hotel></app-ttk-filter-hotel>
+                            </div>
+                            <div class="col-auto">
+                                <app-ttk-map-hotel></app-ttk-map-hotel>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="ModalModifySearch" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-fullscreen-lg-down">
+                    <div class="modal-content">
+                        <div class="modal-header d-flex d-lg-none">
+                            <h1 class="modal-title fs-5">Modify Search</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body p-0 bg-light">
+                            <div class="bg-white p-4">
+                                <div class="row">
+                                    <div class="position-relative pb-4 pb-md-0 col-12 col-md-5">
+                                        <app-ttk-autocomplete-destination></app-ttk-autocomplete-destination>
+                                    </div>
+                                    <div class="pb-4 pb-md-0 col-12 col-md-5">
+                                        <app-ttk-calendar></app-ttk-calendar>
+                                    </div>
+                                    <div class="pb-2 col-12 col-md-2">
+                                        <button class="btn btn-primary w-100 fs-7 rounded-pill"
+                                            data-bs-dismiss="modal">
+                                            Find
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pt-2 px-4 border-top">
+                                <div class="row">
+                                    <div class="pb-3 col-auto">
+                                        <app-ttk-guestinroom></app-ttk-guestinroom>
+                                    </div>
+                                    <div class="pb-3 col-auto">
+                                        <app-ttk-recommended-destination></app-ttk-recommended-destination>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer d-flex d-lg-none">
+                            <button type="button" class="btn btn-dark fs-8 rounded-1"
+                                data-bs-dismiss="modal">Close</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-
-        <div class="modal fade" id="ModalModifySearch" tabindex="-1" aria-hidden="true">
-            <div class="modal-dialog modal-lg modal-fullscreen-lg-down">
-                <div class="modal-content">
-                    <div class="modal-header d-flex d-lg-none">
-                        <h1 class="modal-title fs-5">Modify Search</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body p-0 bg-light">
-                        <app-search-hotels></app-search-hotels>
-                    </div>
-                    <div class="modal-footer d-flex d-lg-none">
-                        <button type="button" class="btn btn-dark fs-8 rounded-1" data-bs-dismiss="modal">Close</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
 
         <ng-container *ngFor="let hotels of hotel">
-
-            <div class="d-flex bg-white mt-3 border-bottom">
+            <div class="d-flex bg-white shadow-sm mt-3 border-bottom rounded overflow-hidden">
                 <div class="col-5 col-lg-3">
                     <a href="javascript: void(0);" routerLink="/hotel/description/" class="d-block rn-bgcover h-100"
                         style="background-image: url('{{ hotels.hotelimage }}');">
@@ -62,7 +104,6 @@
                 </div>
                 <div class="col-7 col-lg-9 d-flex flex-wrap">
                     <div class="col-12 col-lg-9 p-3">
-
                         <div class="d-flex flex-wrap justify-content-between">
                             <div class="row align-items-center">
                                 <div class="pb-2 col-auto">
@@ -127,11 +168,6 @@
                     </div>
                 </div>
             </div>
-
         </ng-container>
-
-
-
-
     </div>
 </div>
