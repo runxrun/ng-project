@@ -6,10 +6,8 @@ import { Component,OnInit } from '@angular/core';
   styleUrls: ['./pax-detail.component.css']
 })
 export class PaxDetailComponent {
-  fieldTextType: boolean | undefined;
+
   constructor() {}
   ngOnInit() {}
-  toggleFieldTextType() {
-    this.fieldTextType = !this.fieldTextType;
-  }
+
 }

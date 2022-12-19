@@ -1,0 +1,103 @@
+<div class="bg-white border rounded-1 mb-3">
+    <div class="bg-light border-bottom py-2 px-3">
+        <div class="fs-7 fw-bold text-dark">Enter your information</div>
+    </div>
+    <div class="p-4">
+        <div class="fs-7 text-secondary">
+            Signing in to your account allows for faster bookings and more
+            <a href="javascript:void(0);" class="text-primary fs-7 px-2" data-bs-toggle="modal"
+                data-bs-target="#boxLoginModal">
+                Sign in
+            </a>
+        </div>
+        <div class="py-4">
+            <div class="row">
+                <div class="pb-3 col-7 col-md-3">
+                    <div class="fs-7 text-secondary">
+                        Title <span class="text-danger">*</span>
+                    </div>
+                    <div>
+                        <select class="form-select rounded-0 fs-7">
+                            <option value="">Not specified</option>
+                            <option value="Mr">Mr.</option>
+                            <option value="Ms">Ms.</option>
+                            <option value="Mrs">Mrs.</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="pb-3 col-12 col-md-4">
+                    <div class="fs-7 text-secondary">
+                        First name <span class="text-danger">*</span>
+                    </div>
+                    <div>
+                        <input type="text" class="form-control rounded-0 fs-7" />
+                    </div>
+                </div>
+                <div class="pb-3 col-12 col-md-5 col-xl-4">
+                    <div class="fs-7 text-secondary">
+                        Last name <span class="text-danger">*</span>
+                    </div>
+                    <div>
+                        <input type="text" class="form-control rounded-0 fs-7" />
+                    </div>
+                </div>
+                <div class="pb-3 col-12 col-md-7">
+                    <div class="fs-7 text-secondary">
+                        Nationality <span class="text-danger">*</span>
+                    </div>
+                    <div>
+                        <select class="form-select rounded-0 fs-7">
+                            <option value="">Please select</option>
+                            <option value="">Japan</option>
+                            <option value="">Singapore</option>
+                            <option value="" selected>Thailand</option>
+                            <option value="">Vietnam</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="pb-3 col-12 col-md-5 col-xl-4">
+                    <div class="fs-7 text-secondary">
+                        Contact number <span class="text-danger">*</span>
+                    </div>
+                    <div>
+                        <input type="text" class="form-control rounded-0 fs-7" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-2 pb-2">
+                <div class="fs-7 fw-bold text-dark">
+                    Confirmation email sent to this address
+                </div>
+            </div>
+            <div class="row">
+                <div class="pb-3 col-12 col-md-6 col-xl-7">
+                    <div class="fs-7 text-secondary">
+                        Email address <span class="text-danger">*</span>
+                    </div>
+                    <div>
+                        <input type="text" class="form-control rounded-0 fs-7" />
+                    </div>
+                </div>
+                <div class="pb-3 col-12 col-md-6 col-xl-4">
+                    <div class="fs-7 text-secondary">
+                        Password <span class="text-danger">*</span>
+                    </div>
+                    <div class="input-group">
+                        <input [type]="fieldTextType ? 'text' : 'password'"
+                            class="form-control rounded-0 fs-7 text-dark" />
+                        <button class="input-group-text rounded-0 fs-7 bg-white" (click)="toggleFieldTextType()">
+                            <i class="fa-solid fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="fs-7 text-secondary">
+                Passwords must have at least 8 characters and contain at least
+                two of the following:
+                <br />- Uppercase letters <br />- Lowercase letters <br />-
+                Numbers <br />- Symbolic
+            </div>
+        </div>
+    </div>
+</div>

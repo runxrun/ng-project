@@ -12,7 +12,6 @@
 </div>
 <div class="bg-light">
     <div class="container py-4">
-
         <div class="alert alert-success py-3 px-3" role="alert">
             <div class="d-flex align-items-center">
                 <div class="px-2 fs-7"><i class="fas fa-lock"></i></div>
@@ -24,135 +23,8 @@
         </div>
         <div class="row">
             <div class="col-12 col-lg-8">
-                <div class="bg-white border rounded-1 mb-3">
-                    <div class="bg-light border-bottom py-2 px-3">
-                        <div class="fs-7 fw-bold text-dark">Enter your information</div>
-                    </div>
-                    <div class="p-4">
-                        <div class="fs-7 text-secondary">
-                            Signing in to your account allows for faster bookings and more
-                            <a href="javascript:void(0);" class="text-primary fs-7 px-2" routerLink="/login">
-                                Sign in
-                            </a>
-                        </div>
-                        <div class="py-4">
-                            <div class="row">
-                                <div class="pb-3 col-7 col-md-3">
-                                    <div class="fs-7 text-secondary">
-                                        Title <span class="text-danger">*</span>
-                                    </div>
-                                    <div>
-                                        <select class="form-select rounded-0 fs-7">
-                                            <option value="">Please select</option>
-                                            <option value="Mr">Mr.</option>
-                                            <option value="Ms">Ms.</option>
-                                            <option value="Mrs">Mrs.</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="pb-3 col-12 col-md-4">
-                                    <div class="fs-7 text-secondary">
-                                        First name <span class="text-danger">*</span>
-                                    </div>
-                                    <div>
-                                        <input type="text" class="form-control rounded-0 fs-7" />
-                                    </div>
-                                </div>
-                                <div class="pb-3 col-12 col-md-5 col-xl-4">
-                                    <div class="fs-7 text-secondary">
-                                        Last name <span class="text-danger">*</span>
-                                    </div>
-                                    <div>
-                                        <input type="text" class="form-control rounded-0 fs-7" />
-                                    </div>
-                                </div>
-                                <div class="pb-3 col-12 col-md-7">
-                                    <div class="fs-7 text-secondary">
-                                        Nationality <span class="text-danger">*</span>
-                                    </div>
-                                    <div>
-                                        <select class="form-select rounded-0 fs-7">
-                                            <option value="">Please select</option>
-                                            <option value="">Japan</option>
-                                            <option value="">Singapore</option>
-                                            <option value="" selected>Thailand</option>
-                                            <option value="">Vietnam</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="pb-3 col-12 col-md-5 col-xl-4">
-                                    <div class="fs-7 text-secondary">
-                                        Contact number <span class="text-danger">*</span>
-                                    </div>
-                                    <div>
-                                        <input type="text" class="form-control rounded-0 fs-7" />
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="pt-2 pb-2">
-                                <div class="fs-7 fw-bold text-dark">
-                                    Confirmation email sent to this address
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="pb-3 col-12 col-md-6 col-xl-5">
-                                    <div class="fs-7 text-secondary">
-                                        Email address <span class="text-danger">*</span>
-                                    </div>
-                                    <div>
-                                        <input type="text" class="form-control rounded-0 fs-7" />
-                                    </div>
-                                </div>
-                                <div class="pb-3 col-12 col-md-6 col-xl-5">
-                                    <div class="fs-7 text-secondary">
-                                        Password <span class="text-danger">*</span>
-                                    </div>
-                                    <div class="input-group">
-                                        <input [type]="fieldTextType ? 'text' : 'password'"
-                                            class="form-control rounded-0 fs-7 text-dark" />
-                                        <button class="input-group-text rounded-0 fs-7 bg-white"
-                                            (click)="toggleFieldTextType()">
-                                            <i class="fa-solid fa-eye"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="fs-7 text-secondary">
-                                Passwords must have at least 8 characters and contain at least
-                                two of the following:
-                                <br />- Uppercase letters <br />- Lowercase letters <br />-
-                                Numbers <br />- Symbolic
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-white border rounded-1 mb-3">
-                    <div class="bg-light border-bottom">
-                        <button class="btn border-0 w-100 py-2 px-3 text-start" data-bs-toggle="collapse"
-                            data-bs-target="#collapseHotel_01" aria-controls="collapseHotel_01">
-                            <div class="d-flex align-items-center">
-                                <div class="fs-7 pe-3 text-secondary">
-                                    <i class="fa-solid fa-bed"></i>
-                                </div>
-                                <div class="fs-7 fw-bold text-dark">
-                                    HTL BANGKOK
-                                </div>
-                            </div>
-                        </button>
-                    </div>
-                    <div class="collapse show" id="collapseHotel_01">
-                        <div class="p-3">
-                            <br />
-                            <br />
-                            <br />
-                            <br />
-                            <br />
-                            <br />
-                            <br />
-                        </div>
-                    </div>
-                </div>
+                <app-member-register></app-member-register>
+                <app-hotel-paxdetail></app-hotel-paxdetail>
             </div>
             <div class="col-12 col-lg-4">
                 <app-bookingdetail></app-bookingdetail>
@@ -160,7 +32,47 @@
                 <app-aggregate></app-aggregate>
             </div>
         </div>
-
-
+        <div class="bg-white border">
+            <div class="p-4">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-10 col-lg-8">
+                        <div class="pb-2 fs-5 fw-bold text-dark text-center">
+                            PAYMENT METHOD
+                        </div>
+                        <div class="fs-7 text-secondary text-center">
+                            By signing in to your account, I acknowledge that I have read and agree to
+                            <a href="javascript: void(0);" class="text-nowrap text-secondary">Term and Conditions</a>
+                            and
+                            <a href="javascript: void(0);" class="text-nowrap text-secondary">Privacy Policy</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="py-4 fs-6 fw-bold text-dark text-center">
+                    We accept all major credit cards below
+                </div>
+                <div class="pb-4">
+                    <div class="row justify-content-center">
+                        <div class="col-auto">
+                            <img src="/assets/images/sample/visa.png" class="img-fluid">
+                        </div>
+                        <div class="col-auto">
+                            <img src="/assets/images/sample/mastercard.png" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+                <div class="py-2">
+                    <div class="row justify-content-center">
+                        <div class="col-12 col-sm-10 col-md-8 col-lg-6">
+                            <button class="btn btn-success py-2 rounded-1 w-100">
+                                <div class="d-flex justify-content-center py-1">
+                                    <div class="pe-2 fs-6"><i class="fas fa-lock"></i></div>
+                                    <div class="ps-1 fs-6 fw-bold">Proceed booking</div>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

@@ -34,6 +34,8 @@ import { TtkRecommendedDestinationComponent } from './components/ttk-recommended
 import { TtkSortingHotelComponent } from './components/ttk-sorting-hotel/ttk-sorting-hotel.component';
 import { TtkFilterHotelComponent } from './components/ttk-filter-hotel/ttk-filter-hotel.component';
 import { TtkMapHotelComponent } from './components/ttk-map-hotel/ttk-map-hotel.component';
+import { HotelPaxdetailComponent } from './components/paxdetail/hotel-paxdetail/hotel-paxdetail.component';
+import { MemberRegisterComponent } from './components/paxdetail/member-register/member-register.component';
 
 @NgModule({
   declarations: [
@@ -65,6 +67,8 @@ import { TtkMapHotelComponent } from './components/ttk-map-hotel/ttk-map-hotel.c
     TtkSortingHotelComponent,
     TtkFilterHotelComponent,
     TtkMapHotelComponent,
+    HotelPaxdetailComponent,
+    MemberRegisterComponent,
   ],
   imports: [
     BrowserModule,
