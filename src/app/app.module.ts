@@ -36,6 +36,10 @@ import { TtkFilterHotelComponent } from './components/ttk-filter-hotel/ttk-filte
 import { TtkMapHotelComponent } from './components/ttk-map-hotel/ttk-map-hotel.component';
 import { HotelPaxdetailComponent } from './components/paxdetail/hotel-paxdetail/hotel-paxdetail.component';
 import { MemberRegisterComponent } from './components/paxdetail/member-register/member-register.component';
+import { EnhancementComponent } from './components/paxdetail/hotel-paxdetail/components/enhancement/enhancement.component';
+import { FlightDetailComponent } from './components/paxdetail/hotel-paxdetail/components/flight-detail/flight-detail.component';
+import { SpecialRequestComponent } from './components/paxdetail/hotel-paxdetail/components/special-request/special-request.component';
+import { GuestInRoomComponent } from './components/paxdetail/hotel-paxdetail/components/guest-in-room/guest-in-room.component';
 
 @NgModule({
   declarations: [
@@ -69,6 +73,10 @@ import { MemberRegisterComponent } from './components/paxdetail/member-register/
     TtkMapHotelComponent,
     HotelPaxdetailComponent,
     MemberRegisterComponent,
+    EnhancementComponent,
+    FlightDetailComponent,
+    SpecialRequestComponent,
+    GuestInRoomComponent,
   ],
   imports: [
     BrowserModule,
