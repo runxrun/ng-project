@@ -1,74 +1,76 @@
-<div class="pb-3">
-    <div class="fs-7 fw-bold text-dark">
-        Special Request
-    </div>
-    <div class="fs-8 text-secondary">
-        Any special request is subject to availability
-    </div>
-</div>
-<div class="row gy-1 gx-3">
-    <ng-container *ngFor="let request of special_request; index as i">
-        <div class="col-12 col-md-6 col-lg-4">
-            <div class="form-check">
-                <input class="form-check-input rounded-0" type="checkbox" value="" [id]="'rq_'+i">
-                <label class="form-check-label fs-7 text-secondary" [for]="'rq_'+i">
-                    {{request.name}}
-                </label>
-            </div>
+<div class="p-3 border-top">
+    <div class="pb-3">
+        <div class="fs-7 fw-bold text-dark">
+            Special Request
         </div>
-    </ng-container>
-</div>
-<div class="pt-3">
+        <div class="fs-8 text-secondary">
+            Any special request is subject to availability
+        </div>
+    </div>
     <div class="row gy-1 gx-3">
-        <div class="col-12 col-md-6 col-lg-4">
-            <div class="form-check">
-                <input class="form-check-input rounded-0" type="checkbox" value="" [id]="'rq_early_check_in'">
-                <label class="form-check-label fs-7 text-secondary" [for]="'rq_early_check_in'">
-                    Early check in
-                </label>
-            </div>
-            <div class="row">
-                <div class="col-6 col-lg-8 py-1">
-                    <input type="text" class="form-control rounded-0 fs-8" value="00:00">
+        <ng-container *ngFor="let request of special_request; index as i">
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="form-check">
+                    <input class="form-check-input rounded-0" type="checkbox" value="" [id]="'rq_'+i">
+                    <label class="form-check-label fs-7 text-secondary" [for]="'rq_'+i">
+                        {{request.name}}
+                    </label>
                 </div>
             </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4">
-            <div class="form-check">
-                <input class="form-check-input rounded-0" type="checkbox" value="" [id]="'rq_early_check_out'">
-                <label class="form-check-label fs-7 text-secondary" [for]="'rq_early_check_out'">
-                    Early check out
-                </label>
-            </div>
-            <div class="row">
-                <div class="col-6 col-lg-8 py-1">
-                    <input type="text" class="form-control rounded-0 fs-8" value="00:00">
+        </ng-container>
+    </div>
+    <div class="pt-3">
+        <div class="row gy-1 gx-3">
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="form-check">
+                    <input class="form-check-input rounded-0" type="checkbox" value="" [id]="'rq_early_check_in'">
+                    <label class="form-check-label fs-7 text-secondary" [for]="'rq_early_check_in'">
+                        Early check in
+                    </label>
+                </div>
+                <div class="row">
+                    <div class="col-6 col-lg-8 py-1">
+                        <input type="text" class="form-control rounded-0 fs-8" value="00:00">
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4">
-            <div class="form-check">
-                <input class="form-check-input rounded-0" type="checkbox" value="" [id]="'rq_babycot'">
-                <label class="form-check-label fs-7 text-secondary" [for]="'rq_babycot'">
-                    Request baby cot
-                </label>
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="form-check">
+                    <input class="form-check-input rounded-0" type="checkbox" value="" [id]="'rq_early_check_out'">
+                    <label class="form-check-label fs-7 text-secondary" [for]="'rq_early_check_out'">
+                        Early check out
+                    </label>
+                </div>
+                <div class="row">
+                    <div class="col-6 col-lg-8 py-1">
+                        <input type="text" class="form-control rounded-0 fs-8" value="00:00">
+                    </div>
+                </div>
             </div>
-            <div class="row">
-                <div class="col-6 col-lg-8 py-1">
-                    <input type="text" class="form-control rounded-0 fs-8" value="0">
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="form-check">
+                    <input class="form-check-input rounded-0" type="checkbox" value="" [id]="'rq_babycot'">
+                    <label class="form-check-label fs-7 text-secondary" [for]="'rq_babycot'">
+                        Request baby cot
+                    </label>
+                </div>
+                <div class="row">
+                    <div class="col-6 col-lg-8 py-1">
+                        <input type="text" class="form-control rounded-0 fs-8" value="0">
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<div class="pt-4 pb-2">
-    <div class="row">
-        <div class="col-12 col-lg-11">
-            <div class="fs-7 fw-bold text-dark">
-                Remark
-            </div>
-            <div class="pt-1">
-                <textarea class="form-control rounded-0 fs-7" rows="4"></textarea>
+    <div class="pt-4 pb-2">
+        <div class="row">
+            <div class="col-12 col-lg-11">
+                <div class="fs-7 fw-bold text-dark">
+                    Remark
+                </div>
+                <div class="pt-1">
+                    <textarea class="form-control rounded-0 fs-7" rows="4"></textarea>
+                </div>
             </div>
         </div>
     </div>
