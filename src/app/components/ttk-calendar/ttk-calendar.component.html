@@ -2,7 +2,7 @@
     <div class="dp-hidden position-absolute">
         <div class="input-group">
             <input name="datepicker" class="opacity-0" ngbDatepicker #datepicker="ngbDatepicker" [autoClose]="'outside'"
-                (dateSelect)="onDateSelection($event)" [displayMonths]="2" [dayTemplate]="t" outsideDays="hidden"
+                (dateSelect)="onDateSelection($event)" [displayMonths]="2" [dayTemplate]="t" outsideDays="hidden" [minDate]="minDate"
                 [startDate]="fromDate!" tabindex="-1" [footerTemplate]="footerTemplate" autocomplete="off">
             <ng-template #t let-date let-focused="focused">
                 <div class="custom-day p-0" [class.focused]="focused" [class.range]="isRange(date)"
@@ -29,15 +29,12 @@
                 <i class="fas fa-calendar-day"></i>
             </div>
             <div class="fs-8 text-secondary">
-                Stay . Sat - Mon, 2 Nights
+                Stay . {{ fromDate | formatDate: toDate: 'E' }}, {{ fromDate | diffDate: toDate }} Nights
             </div>
         </div>
-        <!-- <input #dpFromDate type="hidden" class="form-control" placeholder="yyyy-mm-dd" name="dpFromDate"
-                [value]="formatter.format(fromDate)+' - '+formatter.format(toDate)"
-                (input)="fromDate = validateInput(fromDate, dpFromDate.value)"> -->
         <button class="btn p-0 border-0 rounded-0 shadow-none fs-5 fw-bold text-dark" (click)="datepicker.toggle()"
             type="button">
-            {{formatter.format(fromDate)+' - '+formatter.format(toDate)}}
+            {{ fromDate | formatDate: toDate}}
         </button>
     </div>
 </div>

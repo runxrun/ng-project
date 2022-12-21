@@ -40,6 +40,7 @@ import { EnhancementComponent } from './components/paxdetail/hotel-paxdetail/com
 import { FlightDetailComponent } from './components/paxdetail/hotel-paxdetail/components/flight-detail/flight-detail.component';
 import { SpecialRequestComponent } from './components/paxdetail/hotel-paxdetail/components/special-request/special-request.component';
 import { GuestInRoomComponent } from './components/paxdetail/hotel-paxdetail/components/guest-in-room/guest-in-room.component';
+import { PipeModule } from './pipe/pipe.module';
 
 @NgModule({
   declarations: [
@@ -86,6 +87,7 @@ import { GuestInRoomComponent } from './components/paxdetail/hotel-paxdetail/com
     NgbModule,
     CarouselModule,
     AutocompleteLibModule,
+    PipeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

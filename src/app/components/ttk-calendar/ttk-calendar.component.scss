@@ -45,12 +45,17 @@
 .class-custom::ng-deep {
 
 
-
+    .ngb-dp-day.disabled {
+        opacity: 0.6;
+    }
 
     .ngb-dp-arrow {
         padding-right: 0.5rem;
         padding-left: 0.5rem;
         padding-top: 1rem;
+        button[disabled] {
+            opacity: 0.5;
+        } 
     }
 
     .ngb-dp-navigation-select {
