@@ -2,18 +2,21 @@ import { Component } from '@angular/core';
 import { NgbCalendar, NgbDate, NgbDateParserFormatter } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
-  selector: 'app-ttk-calendar',
-  templateUrl: './ttk-calendar.component.html',
-  styleUrls: ['./ttk-calendar.component.scss']
+	selector: 'app-ttk-calendar',
+	templateUrl: './ttk-calendar.component.html',
+	styleUrls: ['./ttk-calendar.component.scss']
 })
 export class TtkCalendarComponent {
 
-  hoveredDate: NgbDate | null = null;
+	minDate: NgbDate;
+
+	hoveredDate: NgbDate | null = null;
 
 	fromDate: NgbDate | null;
 	toDate: NgbDate | null;
 
 	constructor(private calendar: NgbCalendar, public formatter: NgbDateParserFormatter) {
+		this.minDate = calendar.getToday();
 		this.fromDate = calendar.getToday();
 		this.toDate = calendar.getNext(calendar.getToday(), 'd', 2);
 	}

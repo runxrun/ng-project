@@ -42,6 +42,7 @@ import { SpecialRequestComponent } from './components/paxdetail/hotel-paxdetail/
 import { GuestInRoomComponent } from './components/paxdetail/hotel-paxdetail/components/guest-in-room/guest-in-room.component';
 import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password.component';
 import { SignupComponent } from './pages/signup/signup.component';
+import { PipeModule } from './pipe/pipe.module';
 
 @NgModule({
   declarations: [
@@ -90,6 +91,7 @@ import { SignupComponent } from './pages/signup/signup.component';
     NgbModule,
     CarouselModule,
     AutocompleteLibModule,
+    PipeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
