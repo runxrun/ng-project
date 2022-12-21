@@ -1,4 +1,4 @@
-<lightgallery [settings]="settings" [onInit]="onInit">
+<!-- <lightgallery [settings]="settings" [onInit]="onInit">
     <a *ngFor="let gallery of galleries" className="gallery-item" [attr.href]="gallery.imgname">
         <div class="h-100 rn-bgcover rounded-1" style="background-image: url('{{ gallery.imgname }}');">
             <div class="btn d-none d-lg-flex">
@@ -9,9 +9,9 @@
             </div>
         </div>
     </a>
-</lightgallery>
+</lightgallery> -->
 
-<!-- <div class="pb-2">
+<div class="pb-2">
     <div class="row g-2">
         <div class="col-12 col-lg-6">
             <ng-container *ngFor="let gallery of galleries|slice:0:1">
@@ -61,8 +61,6 @@
     </div>
 </div>
 
-
-
 <div class="modal fade" id="HotelGalleryModal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-xl modal-fullscreen-xxl-down">
         <div class="modal-content">
@@ -71,19 +69,18 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body p-1">
-                <div class="row g-1">
-                    <ng-container *ngFor="let gallery of galleries; index as i;">
-                        <div class="col-4 col-lg-3 col-xl-2">
-                            <div class="rn-bgcover" style="background-image: url('{{ gallery.imgname }}');">
-                                <img src="/assets/images/image-ratio-4-3.gif" class="w-100">
-                            </div>
+                <lightgallery [settings]="settings" [onInit]="onInit" class="row g-1">
+                    <a class="gallery-item col-4 col-lg-3 col-xl-2" *ngFor="let gallery of galleries"
+                        [attr.href]="gallery.imgname" data-bs-dismiss="modal" aria-label="Close">
+                        <div class="rn-bgcover" style="background-image: url('{{ gallery.imgname }}');">
+                            <img src="/assets/images/image-ratio-4-3.gif" class="opacity-0 w-100 h-100">
                         </div>
-                    </ng-container>
-                </div>
+                    </a>
+                </lightgallery>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-dark fs-8 rounded-1" data-bs-dismiss="modal">Close</button>
             </div>
         </div>
     </div>
-</div> -->
+</div>
