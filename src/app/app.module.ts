@@ -41,6 +41,7 @@ import { SpecialRequestComponent } from './components/paxdetail/hotel-paxdetail/
 import { GuestInRoomComponent } from './components/paxdetail/hotel-paxdetail/components/guest-in-room/guest-in-room.component';
 import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password.component';
 import { SignupComponent } from './pages/signup/signup.component';
+import { LightgalleryModule } from 'lightgallery/angular';
 import { PipeModule } from './pipe/pipe.module';
 import { TtkSignupComponent } from './components/ttk-signup/ttk-signup.component';
 
@@ -91,6 +92,7 @@ import { TtkSignupComponent } from './components/ttk-signup/ttk-signup.component
     NgbModule,
     CarouselModule,
     AutocompleteLibModule,
+    LightgalleryModule,
     PipeModule
   ],
   providers: [],

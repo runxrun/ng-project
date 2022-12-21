@@ -1,4 +1,17 @@
-<div class="pb-2">
+<lightgallery [settings]="settings" [onInit]="onInit">
+    <a *ngFor="let gallery of galleries" className="gallery-item" [attr.href]="gallery.imgname">
+        <div class="h-100 rn-bgcover rounded-1" style="background-image: url('{{ gallery.imgname }}');">
+            <div class="btn d-none d-lg-flex">
+                <img src="/assets/images/image-ratio-4-3.gif" class="opacity-0 w-100 h-100">
+            </div>
+            <div class="btn d-flex d-lg-none">
+                <img src="/assets/images/image-ratio-16-9.gif" class="opacity-0 w-100 h-100">
+            </div>
+        </div>
+    </a>
+</lightgallery>
+
+<!-- <div class="pb-2">
     <div class="row g-2">
         <div class="col-12 col-lg-6">
             <ng-container *ngFor="let gallery of galleries|slice:0:1">
@@ -73,4 +86,4 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
