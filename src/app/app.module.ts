@@ -40,6 +40,8 @@ import { EnhancementComponent } from './components/paxdetail/hotel-paxdetail/com
 import { FlightDetailComponent } from './components/paxdetail/hotel-paxdetail/components/flight-detail/flight-detail.component';
 import { SpecialRequestComponent } from './components/paxdetail/hotel-paxdetail/components/special-request/special-request.component';
 import { GuestInRoomComponent } from './components/paxdetail/hotel-paxdetail/components/guest-in-room/guest-in-room.component';
+import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password.component';
+import { SignupComponent } from './pages/signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -51,6 +53,7 @@ import { GuestInRoomComponent } from './components/paxdetail/hotel-paxdetail/com
     HomeComponent,
     SupportComponent,
     PagenotfoundComponent,
+    ForgotPasswordComponent,
     ContractComponent,
     MultiLanguagesComponent,
     TtkCalendarComponent,
@@ -77,6 +80,7 @@ import { GuestInRoomComponent } from './components/paxdetail/hotel-paxdetail/com
     FlightDetailComponent,
     SpecialRequestComponent,
     GuestInRoomComponent,
+    SignupComponent,
   ],
   imports: [
     BrowserModule,
