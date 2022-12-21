@@ -23,8 +23,28 @@
         </div>
         <div class="row">
             <div class="col-12 col-lg-8">
-                <app-member-register></app-member-register>
+                <!-- <app-member-register></app-member-register> -->
+
+                <div class="bg-white border rounded-1 mb-3">
+                    <div class="bg-light border-bottom py-2 px-3">
+                        <div class="fs-7 fw-bold text-dark">Enter your information</div>
+                    </div>
+                    <div class="pt-4 pb-2 px-4">
+                        <div class="fs-7 text-secondary">
+                            Signing in to your account allows for faster bookings and more
+                            <a href="javascript:void(0);" class="text-primary fs-7 px-2" data-bs-toggle="modal"
+                                data-bs-target="#boxLoginModal">
+                                Sign in
+                            </a>
+                        </div>
+                    </div>
+                    <div class="pt-2 pb-4 px-4">
+                        <app-ttk-signup></app-ttk-signup>
+                    </div>
+                </div>
+
                 <app-hotel-paxdetail></app-hotel-paxdetail>
+
             </div>
             <div class="col-12 col-lg-4">
                 <app-bookingdetail></app-bookingdetail>

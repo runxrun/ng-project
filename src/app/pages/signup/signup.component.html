@@ -1,1 +1,50 @@
-<p>signup works!</p>
+<div class="bg-light border-top" style="min-height: 520px;">
+    <div class="container py-4">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-9 col-lg-7">
+                <div class="py-4">
+                    <div class="pb-2 fs-3 text-title text-dark text-center">
+                        Sign up
+                    </div>
+                    <div class="pb-4 fs-6 text-secondary text-center">
+                        Easily manage your bookings and enjoy member benefits
+                    </div>
+
+                    <div class="alert alert-warning py-2" role="alert">
+                        <div class="d-flex fs-7">
+                            <div class="pe-1"><i class="fas fa-info-circle"></i></div>
+                            <div class="ps-1">Please fill in following details in English only</div>
+                        </div>
+                    </div>
+
+                    <div class="py-2">
+                        <div class="fs-7 text-secondary">
+                            Signing in to your account allows for faster bookings and more
+                            <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#boxLoginModal"
+                                class="text-primary fs-7 px-2">
+                                Sign in
+                            </a>
+                        </div>
+                    </div>
+                    <div class="py-2">
+                        <!-- <app-member-register></app-member-register> -->
+                        <app-ttk-signup></app-ttk-signup>
+                    </div>
+                    <div class="py-4">
+                        <button class="btn btn-primary rounded-1 w-100 fs-7" routerLink="/hotel/description">
+                            Continue
+                        </button>
+                    </div>
+                    <div>
+                        <div class="fs-7 text-secondary">
+                            Already have an account?
+                            <a href="javascript: void(0);" data-bs-toggle="modal" data-bs-target="#boxLoginModal">
+                                Sign in
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

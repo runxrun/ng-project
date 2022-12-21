@@ -35,7 +35,6 @@ import { TtkSortingHotelComponent } from './components/ttk-sorting-hotel/ttk-sor
 import { TtkFilterHotelComponent } from './components/ttk-filter-hotel/ttk-filter-hotel.component';
 import { TtkMapHotelComponent } from './components/ttk-map-hotel/ttk-map-hotel.component';
 import { HotelPaxdetailComponent } from './components/paxdetail/hotel-paxdetail/hotel-paxdetail.component';
-import { MemberRegisterComponent } from './components/paxdetail/member-register/member-register.component';
 import { EnhancementComponent } from './components/paxdetail/hotel-paxdetail/components/enhancement/enhancement.component';
 import { FlightDetailComponent } from './components/paxdetail/hotel-paxdetail/components/flight-detail/flight-detail.component';
 import { SpecialRequestComponent } from './components/paxdetail/hotel-paxdetail/components/special-request/special-request.component';
@@ -43,6 +42,7 @@ import { GuestInRoomComponent } from './components/paxdetail/hotel-paxdetail/com
 import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { PipeModule } from './pipe/pipe.module';
+import { TtkSignupComponent } from './components/ttk-signup/ttk-signup.component';
 
 @NgModule({
   declarations: [
@@ -76,12 +76,12 @@ import { PipeModule } from './pipe/pipe.module';
     TtkFilterHotelComponent,
     TtkMapHotelComponent,
     HotelPaxdetailComponent,
-    MemberRegisterComponent,
     EnhancementComponent,
     FlightDetailComponent,
     SpecialRequestComponent,
     GuestInRoomComponent,
     SignupComponent,
+    TtkSignupComponent,
   ],
   imports: [
     BrowserModule,

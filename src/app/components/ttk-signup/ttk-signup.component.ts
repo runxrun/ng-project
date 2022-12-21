@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-member-register',
-  templateUrl: './member-register.component.html',
-  styleUrls: ['./member-register.component.css']
+  selector: 'app-ttk-signup',
+  templateUrl: './ttk-signup.component.html',
+  styleUrls: ['./ttk-signup.component.css']
 })
-export class MemberRegisterComponent {
+export class TtkSignupComponent {
   fieldTextType: boolean | undefined;
   constructor() {}
   ngOnInit() {}
@@ -13,5 +13,3 @@ export class MemberRegisterComponent {
     this.fieldTextType = !this.fieldTextType;
   }
 }
-
-
