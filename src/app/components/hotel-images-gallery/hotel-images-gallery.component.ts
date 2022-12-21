@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { LightGallery } from 'lightgallery/lightgallery';
+import lgZoom from 'lightgallery/plugins/zoom';
 
 @Component({
   selector: 'app-hotel-images-gallery',
@@ -6,7 +8,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./hotel-images-gallery.component.css']
 })
 export class HotelImagesGalleryComponent {
+  settings = {
+    counter: false,
+    plugins: [lgZoom]
+  };
 
+  lightGallery!: LightGallery;
 
 
   public galleries:any[] = [
@@ -73,6 +80,10 @@ export class HotelImagesGalleryComponent {
 
 
   ];
+
+  onInit = (detail: {instance: any}): void => {
+    this.lightGallery = detail.instance;
+  };
 
 
 }

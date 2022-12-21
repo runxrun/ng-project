@@ -42,6 +42,7 @@ import { SpecialRequestComponent } from './components/paxdetail/hotel-paxdetail/
 import { GuestInRoomComponent } from './components/paxdetail/hotel-paxdetail/components/guest-in-room/guest-in-room.component';
 import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password.component';
 import { SignupComponent } from './pages/signup/signup.component';
+import { LightgalleryModule } from 'lightgallery/angular';
 import { PipeModule } from './pipe/pipe.module';
 
 @NgModule({
@@ -91,6 +92,7 @@ import { PipeModule } from './pipe/pipe.module';
     NgbModule,
     CarouselModule,
     AutocompleteLibModule,
+    LightgalleryModule,
     PipeModule
   ],
   providers: [],
