@@ -28,7 +28,7 @@
                         </div>
                         <div class="mb-3">
                             <button type="submit" class="btn btn-primary fs-7 fw-bold rounded-1 w-100"
-                                [disabled]="!loginForm.valid">
+                                [disabled]="!loginForm.valid" routerLink="/member/profile" data-bs-dismiss="modal">
                                 SIGN IN
                             </button>
                         </div>
@@ -46,7 +46,7 @@
                     <div class="col-auto">
                         <div class="fs-7 text-secondary">
                             Don't have an account?
-                            <a href="javascript: void(0);" data-bs-toggle="modal" data-bs-target="#boxLoginModal">
+                            <a href="javascript: void(0);" routerLink="/signup" data-bs-dismiss="modal">
                                 Create account
                             </a>
                         </div>
