@@ -87,6 +87,17 @@ $star-rating: #FF9900;
   }
 }
 
+
+.btn-outline-primary {
+  border-color: $primary !important;
+  color: $primary !important;
+}
+.btn-outline-primary:hover {
+  background-color: $primary !important;
+  color: #ffffff !important;
+}
+
+
 .btn-identity {
   background-color: $identity !important;
   border-color: $identity !important;
