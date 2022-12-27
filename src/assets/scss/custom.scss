@@ -136,3 +136,8 @@ $star-rating: #FF9900;
 .dropdown-item.active, .dropdown-item:active {
   background-color: $primary !important;
 }
+
+.rn-sticky {
+  position: sticky;
+  top: 20px;
+}

@@ -9,7 +9,7 @@ import lgZoom from 'lightgallery/plugins/zoom';
 })
 export class HotelImagesGalleryComponent {
   settings = {
-    counter: false,
+    counter: true,
     plugins: [lgZoom]
   };
 
