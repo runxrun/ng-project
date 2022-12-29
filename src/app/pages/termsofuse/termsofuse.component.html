@@ -1,0 +1,67 @@
+<div class="bg-white border-top">
+    <div class="container py-4" style="height: 600px;">
+        <div>
+            <br>
+            <br>
+            <br>
+        </div>
+        <form [formGroup]="formz">
+            <div class="row g-2 align-items-center">
+                <div class="col-2">
+                    <input type="number" formControlName="input1" class="form-control rounded-0 fs-7" placeholder="0">
+                </div>
+                <div class="col-2">
+                    <input type="number" formControlName="input2" class="form-control rounded-0 fs-7" placeholder="0">
+                </div>
+                <div class="col-2">
+                    <button class="btn btn-primary rounded-0 fs-7 w-100" (click)="test_plus()"
+                        [disabled]="!formz.valid">
+                        Plus
+                    </button>
+                </div>
+                <div class="col-2">
+                    <button class="btn btn-primary rounded-0 fs-7 w-100" (click)="test_minus()"
+                        [disabled]="!formz.valid">
+                        Minus
+                    </button>
+                </div>
+                <div class="col-2">
+                    <button class="btn btn-primary rounded-0 fs-7 w-100" (click)="test_multiply()"
+                        [disabled]="!formz.valid">
+                        Multiply
+                    </button>
+                </div>
+                <div class="col-2">
+                    <button class="btn btn-primary rounded-0 fs-7 w-100" (click)="test_divide()"
+                        [disabled]="!formz.valid">
+                        Divide
+                    </button>
+                </div>
+                <div class="col-12 py-4">
+                    <div class="row g-2 justify-content-between">
+                        <div class="col-10">
+                            <div class="pb-3 border-bottom fs-7 fw-bold text-dark">
+                                SUM : {{ summary }}
+                            </div>
+                            <div class="py-3">
+                                <div class="fs-8 text-secondary">
+                                    <div class="">Plus : {{ formz.value.input1 }} + {{ formz.value.input2 }} = {{ summary_plus }}</div>
+                                    <div class="">Minus : {{ formz.value.input1 }} - {{ formz.value.input2 }} = {{ summary_minus }}</div>
+                                    <div class="">Multiply : {{ formz.value.input1 }} x {{ formz.value.input2 }} = {{ summary_multiply }}</div>
+                                    <div class="">Divide : {{ formz.value.input1 }} / {{ formz.value.input2 }} = {{ summary_divide }}</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="">
+                                <button class="btn btn-outline-primary fs-7 w-100 rounded-0" (click)="reset()">
+                                    Reset
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

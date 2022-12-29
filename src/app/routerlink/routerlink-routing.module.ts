@@ -9,6 +9,7 @@ import { PagenotfoundComponent } from '../pages/pagenotfound/pagenotfound.compon
 import { PaxDetailComponent } from '../pages/pax-detail/pax-detail.component';
 import { SignupComponent } from '../pages/signup/signup.component';
 import { SupportComponent } from '../pages/support/support.component';
+import { TermsofuseComponent } from '../pages/termsofuse/termsofuse.component';
 
 const appRoutes: Routes = [
   { path: 'hotel/result', component: ResultHotelComponent },
@@ -17,6 +18,7 @@ const appRoutes: Routes = [
   { path: 'forgot-password', component: ForgotPasswordComponent },
   { path: 'contract', component: ContractComponent },
   { path: 'help-support', component: SupportComponent },
+  { path: 'terms-of-use', component: TermsofuseComponent },
   { path: 'signup', component: SignupComponent },
   { path: 'ttk', loadChildren: () => import('../ttk/ttk.module').then(m => m.TtkModule) },
   { path: 'member', loadChildren: () => import('../member/member.module').then(m => m.MemberModule) },

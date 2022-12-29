@@ -44,6 +44,7 @@ import { SignupComponent } from './pages/signup/signup.component';
 import { LightgalleryModule } from 'lightgallery/angular';
 import { PipeModule } from './pipe/pipe.module';
 import { TtkSignupComponent } from './components/ttk-signup/ttk-signup.component';
+import { TermsofuseComponent } from './pages/termsofuse/termsofuse.component';
 
 @NgModule({
   declarations: [
@@ -83,6 +84,7 @@ import { TtkSignupComponent } from './components/ttk-signup/ttk-signup.component
     GuestInRoomComponent,
     SignupComponent,
     TtkSignupComponent,
+    TermsofuseComponent,
   ],
   imports: [
     BrowserModule,
@@ -93,7 +95,8 @@ import { TtkSignupComponent } from './components/ttk-signup/ttk-signup.component
     CarouselModule,
     AutocompleteLibModule,
     LightgalleryModule,
-    PipeModule
+    PipeModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
