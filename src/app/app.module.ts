@@ -45,6 +45,8 @@ import { LightgalleryModule } from 'lightgallery/angular';
 import { PipeModule } from './pipe/pipe.module';
 import { TtkSignupComponent } from './components/ttk-signup/ttk-signup.component';
 import { TermsofuseComponent } from './pages/termsofuse/termsofuse.component';
+import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy.component';
+import { CookiesPolicyComponent } from './pages/cookies-policy/cookies-policy.component';
 
 @NgModule({
   declarations: [
@@ -85,6 +87,8 @@ import { TermsofuseComponent } from './pages/termsofuse/termsofuse.component';
     SignupComponent,
     TtkSignupComponent,
     TermsofuseComponent,
+    PrivacyPolicyComponent,
+    CookiesPolicyComponent,
   ],
   imports: [
     BrowserModule,

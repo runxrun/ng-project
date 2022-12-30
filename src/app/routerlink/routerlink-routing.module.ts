@@ -1,12 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ContractComponent } from '../pages/contract/contract.component';
+import { CookiesPolicyComponent } from '../pages/cookies-policy/cookies-policy.component';
 import { ForgotPasswordComponent } from '../pages/forgot-password/forgot-password.component';
 import { HomeComponent } from '../pages/home/home.component';
 import { DescriptionHotelComponent } from '../pages/hotel/description-hotel/description-hotel.component';
 import { ResultHotelComponent } from '../pages/hotel/result-hotel/result-hotel.component';
 import { PagenotfoundComponent } from '../pages/pagenotfound/pagenotfound.component';
 import { PaxDetailComponent } from '../pages/pax-detail/pax-detail.component';
+import { PrivacyPolicyComponent } from '../pages/privacy-policy/privacy-policy.component';
 import { SignupComponent } from '../pages/signup/signup.component';
 import { SupportComponent } from '../pages/support/support.component';
 import { TermsofuseComponent } from '../pages/termsofuse/termsofuse.component';
@@ -19,6 +21,8 @@ const appRoutes: Routes = [
   { path: 'contract', component: ContractComponent },
   { path: 'help-support', component: SupportComponent },
   { path: 'terms-of-use', component: TermsofuseComponent },
+  { path: 'privacy-policy', component: PrivacyPolicyComponent },
+  { path: 'cookies-policy', component: CookiesPolicyComponent },
   { path: 'signup', component: SignupComponent },
   { path: 'ttk', loadChildren: () => import('../ttk/ttk.module').then(m => m.TtkModule) },
   { path: 'member', loadChildren: () => import('../member/member.module').then(m => m.MemberModule) },

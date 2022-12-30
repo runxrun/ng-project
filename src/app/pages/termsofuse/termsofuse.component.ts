@@ -51,6 +51,11 @@ export class TermsofuseComponent {
     this.summary_divide = this.summary;
   }
 
+  random() {
+    this.formz.value.input1 = 10;
+    this.formz.value.input2 = 10;
+  }
+
   reset() {
     this.formz.reset();
     this.formz.value.input1 = 0;
