@@ -8,16 +8,17 @@ $bg-background: #393939;
 $secondary-color: #F7941D;
 $star-rating: #FF9900;
 
-
+$text-normal: 'Inter', 'Sarabun', 'Noto Sans SC', Arial;
+$text-title: 'PT Serif', 'Kanit', 'Noto Serif SC', Arial;
 
 .bg-body-background {
   background-color: $bg-background;
-  font-family: 'Inter', 'Sarabun', 'Noto Sans SC', Arial;
+  font-family: $text-normal;
+}
+.text-title {
+  font-family: $text-title;
 }
 
-.text-title {
-  font-family: 'PT Serif', 'Kanit', 'Noto Serif SC', Arial;
-}
 
 .text-foc{ color: $freeofchage; }
 .text-earlybird{ color: $earlybird; }

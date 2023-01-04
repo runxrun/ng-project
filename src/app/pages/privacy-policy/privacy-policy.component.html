@@ -1,6 +1,63 @@
 <div class="bg-white border-top">
     <div class="container py-4">
 
+
+        <div class="row">
+            <div class="col-12 col-lg-3">
+                &nbsp;
+            </div>
+            <div class="col-12 col-lg-9">
+                <div class="row">
+                    <div class="pb-2 col-4">
+                        <div>
+                            <label class="fs-7 text-secondary">ID Card</label>
+                            <input type="text" class="form-control rounded-0 fs-7" [formControl]="idCard" maxlength="13">
+                        </div>
+                        <ng-container *ngIf="idCard.invalid && idCard.errors?.['required'] && idCard.touched">
+                            <div class="pt-1 text-danger fs-8">
+                                Please enter ID Card
+                            </div>
+                        </ng-container>
+                        <ng-container *ngIf="idCard.invalid && idCard.errors?.['idCard'] && idCard.touched">
+                            <div class="pt-1 text-danger fs-8">
+                                Invalid identity card number
+                            </div>
+                        </ng-container>
+                    </div>
+                    <div class="col-4">
+
+                        <!-- {{ idCard.errors | json }} -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--
+        <div class="form-floating">
+            <input type="text" class="form-control rounded-0 fs-7" id="txtIdCard" placeholder="Enter ID Card">
+            <label class="fs-7" for="txtIdCard">ID Card</label>
+        </div>
+        -->
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <!--
         <div class="circle-wrap">
             <div class="circle">
                 <div class="mask full">
@@ -9,28 +66,16 @@
                 <div class="mask half">
                     <div class="fill"></div>
                 </div>
-                <div class="inside-circle"> 70% </div>
+                <div class="inside-circle text-title">
+                    &nbsp;
+                </div>
             </div>
-        </div>
+        </div> -->
+
 
         <br>
         <br>
         <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
+
     </div>
 </div>
