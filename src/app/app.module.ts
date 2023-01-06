@@ -47,6 +47,7 @@ import { TtkSignupComponent } from './components/ttk-signup/ttk-signup.component
 import { TermsofuseComponent } from './pages/termsofuse/termsofuse.component';
 import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy.component';
 import { CookiesPolicyComponent } from './pages/cookies-policy/cookies-policy.component';
+import { TtkShoppingSearchComponent } from './components/ttk-shopping-search/ttk-shopping-search.component';
 
 @NgModule({
   declarations: [
@@ -89,6 +90,7 @@ import { CookiesPolicyComponent } from './pages/cookies-policy/cookies-policy.co
     TermsofuseComponent,
     PrivacyPolicyComponent,
     CookiesPolicyComponent,
+    TtkShoppingSearchComponent,
   ],
   imports: [
     BrowserModule,
