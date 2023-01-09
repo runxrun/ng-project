@@ -5,13 +5,17 @@ import { MemberRoutingModule } from './member-routing.module';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { MyBookingsComponent } from './pages/my-bookings/my-bookings.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { MemberLinksComponent } from './components/member-links/member-links.component';
+import { ChangePasswordComponent } from './pages/change-password/change-password.component';
 
 
 @NgModule({
   declarations: [
     ProfileComponent,
     MyBookingsComponent,
-    DashboardComponent
+    DashboardComponent,
+    MemberLinksComponent,
+    ChangePasswordComponent
   ],
   imports: [
     CommonModule,
