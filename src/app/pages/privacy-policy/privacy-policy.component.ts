@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AbstractControl, FormControl, ValidatorFn, Validators } from '@angular/forms';
+import { BehaviorSubject } from 'rxjs';
 import { Product } from 'src/app/components/ttk-shopping-search/model/products';
 import { __values } from 'tslib';
 
@@ -72,13 +73,33 @@ export class PrivacyPolicyComponent {
   filteredProducts: Product[] = this.products;
 
   searhProduct(text: string): void {
-    this.filteredProducts = this.products.filter(products=>{
-      //const productName = products.name.toLowerCase()+products.description.toLowerCase();
+    this.filteredProducts = this.products.filter(products => {
       const productName = products.name.toLowerCase();
       const serachName = text.toLowerCase();
       return productName.indexOf(serachName) !== -1;
     });
   }
+
+
+  totalProduct = this.products.length;
+
+
+
+
+
+  // currentPage = 1;
+  // itemsPerPage = 6;
+  // totalPages: Number | undefined;
+
+  // xx() {
+  //   this.products.length;
+  // }
+
+  //console.log('this.currentPage');
+  //this.totalPages = Math.ceil(this.items.length / this.itemsPerPage);
+
+
+
 
 
 }
