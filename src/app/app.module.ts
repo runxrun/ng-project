@@ -48,7 +48,6 @@ import { TermsofuseComponent } from './pages/termsofuse/termsofuse.component';
 import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy.component';
 import { CookiesPolicyComponent } from './pages/cookies-policy/cookies-policy.component';
 import { TtkShoppingSearchComponent } from './components/ttk-shopping-search/ttk-shopping-search.component';
-import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -104,7 +103,6 @@ import { NgxPaginationModule } from 'ngx-pagination';
     LightgalleryModule,
     PipeModule,
     ReactiveFormsModule,
-    NgxPaginationModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { AbstractControl, FormControl, ValidatorFn, Validators } from '@angular/forms';
-import { BehaviorSubject } from 'rxjs';
 import { Product } from 'src/app/components/ttk-shopping-search/model/products';
 import { __values } from 'tslib';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-privacy-policy',
@@ -56,6 +56,9 @@ export class PrivacyPolicyComponent {
 
 
 
+  constructor(private router: Router) {
+
+  }
 
   products: Product[] = [
     { name: 'Apple', image: 'https://cdn.pixabay.com/photo/2017/09/26/13/31/apple-2788616_960_720.jpg', description: 'An apple is an edible fruit produced by an apple tree. Apple trees are cultivated worldwide and are the most widely grown species in the genus Malus', price: 40, },
@@ -80,24 +83,31 @@ export class PrivacyPolicyComponent {
     });
   }
 
-
   totalProduct = this.products.length;
+  currentPage: number = 0;
+  itemsPerPage: number = 6;
+  xPage: number = 1;
+  limitItem: number = this.itemsPerPage;
+  totalPage: number | undefined;
 
+  next_page() {
+    this.totalPage = Math.ceil(this.totalProduct / this.limitItem);
+    if (this.xPage < this.totalPage) {
+      this.currentPage = this.currentPage + this.limitItem;
+      this.itemsPerPage = this.itemsPerPage + this.limitItem;
+      this.xPage++;
+      this.router.navigate(['/privacy-policy/'], { fragment: ''+this.xPage });
+    }
+  }
 
-
-
-
-  // currentPage = 1;
-  // itemsPerPage = 6;
-  // totalPages: Number | undefined;
-
-  // xx() {
-  //   this.products.length;
-  // }
-
-  //console.log('this.currentPage');
-  //this.totalPages = Math.ceil(this.items.length / this.itemsPerPage);
-
+  previous_page() {
+    if (this.xPage > 1) {
+      this.currentPage = this.currentPage - this.limitItem;
+      this.itemsPerPage = this.itemsPerPage - this.limitItem;
+      this.xPage--;
+      this.router.navigate(['/privacy-policy/'], { fragment: ''+this.xPage });
+    }
+  }
 
 
 
