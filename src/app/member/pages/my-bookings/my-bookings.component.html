@@ -33,91 +33,82 @@
                 <app-member-links></app-member-links>
             </div>
             <div class="pb-3 pb-lg-0 col-12 col-lg-9 order-1 order-lg-2">
-
-                <div class="bg-white border pt-3 px-3 mb-3">
-                    <div class="row">
-                        <div class="col-12 col-md-9 col-lg-10">
-
-                            <div class="row">
-                                <div class="col-12 col-lg-6">
-                                    <div class="row">
-                                        <div class="pb-3 col-12 col-md-4">
-                                            <div class="pb-1 fs-9 text-secondary text-uppercase">
-                                                Confirm number
-                                            </div>
-                                            <div class="fs-8 fw-bold text-dark">
-                                                MA266106712
-                                            </div>
-                                        </div>
-                                        <div class="pb-3 col-12 col-md-8">
-                                            <div class="pb-3 d-block d-md-none opacity-50">
-                                                <hr class="p-0 m-0">
-                                            </div>
-                                            <div class="pb-1 fs-9 text-secondary text-uppercase">
-                                                Services
-                                            </div>
-                                            <div class="">
-                                                <div class="fs-8 fw-bold text-dark">
-                                                    HTL BANGKOK
-                                                </div>
-                                                <div class="fs-8 fw-bold text-dark">
-                                                    HTL BKK Massage & Spa
-                                                </div>
-                                                <div class="fs-8 fw-bold text-dark">
-                                                    HTL BKK Restaurant (Buffet)
-                                                </div>
-                                            </div>
-                                        </div>
+                <div class="bg-white border mb-3">
+                    <div class="p-3">
+                        <div class="row g-3">
+                            <div class="col-12">
+                                <div class="">
+                                    <div class="fs-7 fw-bold text-dark">
+                                        Lionel Messi
+                                    </div>
+                                    <div class="fs-7 text-secondary ">
+                                        Complete 2 more bookings to get discounts and benefits
                                     </div>
                                 </div>
-                                <div class="col-12 col-lg-6">
-                                    <div class="pb-3 d-block d-md-none opacity-50">
-                                        <hr class="p-0 m-0">
-                                    </div>
-                                    <div class="row">
-                                        <div class="pb-3 col-12 col-md-4">
-                                            <div class="pb-1 fs-9 text-secondary text-uppercase">
-                                                Period
-                                            </div>
-                                            <div class="fs-8 fw-bold text-dark">
-                                                11 - 13 Nov 2022
-                                            </div>
-                                        </div>
-                                        <div class="pb-3 col-12 col-md-4">
-                                            <div class="pb-1 fs-9 text-secondary text-uppercase">
-                                                Booked on
-                                            </div>
-                                            <div class="fs-8 fw-bold text-dark">
-                                                10 Nov 2022
-                                            </div>
-                                        </div>
-                                        <div class="pb-3 col-12 col-md-4">
-                                            <div class="pb-1 fs-9 text-secondary text-uppercase">
-                                                Status
-                                            </div>
-                                            <div class="d-flex text-success">
-                                                <div class="pe-1 fs-7"><i class="fas fa-check-circle"></i></div>
-                                                <div class="ps-1 fs-7 fw-bold">Complete</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="col-12 col-md-3 col-lg-2">
-                            <div class="pb-3">
-                                <button class="btn btn-outline-primary rounded-0 fs-8 w-100">
-                                    View detail
-                                </button>
                             </div>
                         </div>
                     </div>
                 </div>
+                <ng-container *ngFor="let item of items; index as i;">
+                    <div class="bg-white border mb-3">
+                        <div class="p-3">
+                            <div class="row g-3">
+                                <div class="col-9 col-lg-10">
+                                    <div class="row g-2">
+                                        <div class="col-12 col-lg-3">
+                                            <div class="pb-1 fs-9 text-secondary text-uppercase">
+                                                Confirm number
+                                            </div>
+                                            <div class="fs-8 fw-bold text-success">
+                                                {{ item.bookingid }}
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-lg-4">
+                                            <div class="pb-1 fs-9 text-secondary text-uppercase">
+                                                Services
+                                            </div>
+                                            <ng-container *ngFor="let service of item.services; index as j;">
+                                                <div class="fs-8 fw-bold text-dark">
+                                                    {{ service }}
+                                                </div>
+                                            </ng-container>
+                                        </div>
+                                        <div class="col-12 col-lg-5">
+                                            <div class="row g-2">
+                                                <div class="col-12 col-lg-7">
+                                                    <div class="pb-1 fs-9 text-secondary text-uppercase">
+                                                        Period
+                                                    </div>
+                                                    <div class="pb-1 fs-8 fw-bold text-dark">
+                                                        {{ item.checkin | date:'d MMM y' }} -
+                                                        {{ item.checkout | date:'d MMM y' }}
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-lg-5">
+                                                    <div class="pb-1 fs-9 text-secondary text-uppercase">
+                                                        Booked on
+                                                    </div>
+                                                    <div class="pb-1 fs-8 fw-bold text-dark">
+                                                        {{ item.bookedon | date:'d MMM y' }}
+                                                    </div>
 
-
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-3 col-lg-2">
+                                    <div>
+                                        <button class="btn btn-outline-primary fs-8 rounded-0 w-100">
+                                            View detail
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </ng-container>
             </div>
         </div>
     </div>
 </div>
-
