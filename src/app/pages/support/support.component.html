@@ -1,4 +1,42 @@
 <div class="bg-light border-top">
+    <div class="container py-4">
+
+        <div class="row g-3">
+            <ng-container *ngFor="let item of items | slice:currentPage:itemsPerPage; let i = index">
+                <div class="col-6 col-lg-2" [id]="i">
+                    <div class="rn-bgcover" style="background-image: url('{{ item.url }}');">
+                        <img src="/assets/images/image-ratio-4-3.gif" class="w-100">
+                    </div>
+                    <div class="py-2">
+                        <div class="fs-9 text-secondary text-uppercase">
+                            {{ item.title }}
+                        </div>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+
+        <div class="py-4">
+            <div class="row justify-content-between">
+                <div class="col-4 col-lg-2">
+                    <button class="btn btn-outline-primary w-100 fs-8 px-4 rounded-0"
+                        (click)="previous_page()">
+                        Previous
+                    </button>
+                </div>
+                <div class="col-4 col-lg-2">
+                    <button class="btn btn-outline-primary w-100 fs-8 px-4 rounded-0" (click)="next_page();">
+                        Next
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--
+    <div class="bg-light border-top">
     <br>
 </div>
 <div class="bg-light">
@@ -729,4 +767,4 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->

@@ -48,6 +48,7 @@ import { TermsofuseComponent } from './pages/termsofuse/termsofuse.component';
 import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy.component';
 import { CookiesPolicyComponent } from './pages/cookies-policy/cookies-policy.component';
 import { TtkShoppingSearchComponent } from './components/ttk-shopping-search/ttk-shopping-search.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -103,6 +104,7 @@ import { TtkShoppingSearchComponent } from './components/ttk-shopping-search/ttk
     LightgalleryModule,
     PipeModule,
     ReactiveFormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
