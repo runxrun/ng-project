@@ -21,6 +21,7 @@ export class BookingDetailComponent {
           checkin: '2022-11-11',
           checkout: '2022-11-13',
           nights: '2',
+          status: 'Complete',
           enhancement: [
             {
               image: 'https://manage.combinetrip.com/ImageData/Place/urban-oasis-spa-general3.jpg',
@@ -48,6 +49,24 @@ export class BookingDetailComponent {
 //Superior Mountain View
 //One Bedroom Deluxe Double
 /*
+
+            {
+              image: 'https://manage.combinetrip.com/ImageData/Place/urban-oasis-spa-general3.jpg',
+              name: 'HTL BKK Massage & Spa',
+              date: '12 Nov 2022',
+              time: '14:00',
+              adult: 3,
+              adultprice: 500,
+            },
+            {
+              image: 'https://manage.combinetrip.com/imagedata/Place/800/the_raweekanlaya_dining-general1.jpg',
+              name: 'HTL BKK Restaurant (Buffet)',
+              date: '12 Nov 2022',
+              time: '18:00',
+              adult: 4,
+              adultprice: 500,
+            },
+
       services: [{
         hotelname: 'HTL BANGKOK',
         hoteladdress: '9/3 Soi Ratchadapisek 18 Ratchadapisek Rd., Huay Kwang Bangkok 10310, Thailand',
