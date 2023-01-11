@@ -33,22 +33,50 @@
                 <app-member-links></app-member-links>
             </div>
             <div class="pb-3 pb-lg-0 col-12 col-lg-9 order-1 order-lg-2">
+
                 <div class="bg-white border mb-3">
-                    <div class="p-3">
-                        <div class="row g-3">
-                            <div class="col-12">
-                                <div class="">
-                                    <div class="fs-7 fw-bold text-dark">
-                                        Lionel Messi
-                                    </div>
-                                    <div class="fs-7 text-secondary ">
-                                        Complete 2 more bookings to get discounts and benefits
-                                    </div>
-                                </div>
+                    <div class="p-3 border-bottom">
+                        <div class="fs-7 fw-bold text-dark">
+                            Lionel Messi
+                        </div>
+                        <div class="fs-7 text-secondary ">
+                            Complete 2 more bookings to get discounts and benefits
+                        </div>
+                    </div>
+                    <div>
+                        <div class="row g-0">
+                            <div class="col-4 col-md-3 col-lg-2">
+                                <button class="btn btn-primary w-100 rounded-0 fs-8">
+                                    Upcoming
+                                </button>
+                            </div>
+                            <div class="col-4 col-md-3 col-lg-2">
+                                <button class="btn border-end w-100 rounded-0 fs-8">
+                                    Completed
+                                </button>
+                            </div>
+                            <div class="col-4 col-md-3 col-lg-2">
+                                <button class="btn border-end w-100 rounded-0 fs-8">
+                                    Cancelled
+                                </button>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                <div class="py-3">
+                    <div class="row g-2">
+                        <div class="col-9 col-lg-auto">
+                            <input type="text" class="form-control rounded-0 fs-8" placeholder="Booking ID">
+                        </div>
+                        <div class="col-3 col-lg-auto">
+                            <button class="btn btn-primary w-100 rounded-0 fs-8">
+                                Clear
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
                 <ng-container *ngFor="let item of items; index as i;">
                     <div class="bg-white border mb-3">
                         <div class="p-3">
@@ -57,9 +85,9 @@
                                     <div class="row g-2">
                                         <div class="col-12 col-lg-3">
                                             <div class="pb-1 fs-9 text-secondary text-uppercase">
-                                                Confirm number
+                                                Booking ID
                                             </div>
-                                            <div class="fs-8 fw-bold text-success">
+                                            <div class="fs-8 fw-bold" [ngClass]="getClass(item.status)">
                                                 {{ item.bookingid }}
                                             </div>
                                         </div>
@@ -75,23 +103,21 @@
                                         </div>
                                         <div class="col-12 col-lg-5">
                                             <div class="row g-2">
-                                                <div class="col-12 col-lg-7">
+                                                <div class="col-12 col-lg-6">
                                                     <div class="pb-1 fs-9 text-secondary text-uppercase">
-                                                        Period
+                                                        Booking period
                                                     </div>
                                                     <div class="pb-1 fs-8 fw-bold text-dark">
-                                                        {{ item.checkin | date:'d MMM y' }} -
-                                                        {{ item.checkout | date:'d MMM y' }}
+                                                        {{ item.period }}
                                                     </div>
                                                 </div>
-                                                <div class="col-12 col-lg-5">
+                                                <div class="col-12 col-lg-6">
                                                     <div class="pb-1 fs-9 text-secondary text-uppercase">
                                                         Booked on
                                                     </div>
                                                     <div class="pb-1 fs-8 fw-bold text-dark">
                                                         {{ item.bookedon | date:'d MMM y' }}
                                                     </div>
-
                                                 </div>
                                             </div>
                                         </div>
@@ -99,7 +125,7 @@
                                 </div>
                                 <div class="col-3 col-lg-2">
                                     <div>
-                                        <button class="btn btn-outline-primary fs-8 rounded-0 w-100">
+                                        <button class="btn btn-outline-primary fs-8 rounded-0 w-100" routerLink="/member/booking-detail">
                                             View detail
                                         </button>
                                     </div>

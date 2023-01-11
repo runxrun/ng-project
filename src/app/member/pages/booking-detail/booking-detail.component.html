@@ -1,0 +1,208 @@
+<div class="bg-white border-top">
+    <div class="container">
+        <div class="py-2">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb m-0">
+                    <li class="breadcrumb-item">
+                        <a href="javascript: void(0);" routerLink="/" class="fs-8 text-decoration-none">
+                            Home
+                        </a>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <a href="javascript: void(0);" routerLink="/member" class="fs-8 text-decoration-none">
+                            Member
+                        </a>
+                    </li>
+                    <li class="breadcrumb-item active" aria-current="page">
+                        <a href="javascript: void(0);" class="fs-8 text-secondary text-decoration-none">
+                            My bookings
+                        </a>
+                    </li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="bg-light border-top">
+    <div class="container py-4">
+        <div class="row">
+            <div class="col-12 col-lg-3 order-2 order-lg-1">
+                <app-member-links></app-member-links>
+            </div>
+            <div class="pb-3 pb-lg-0 col-12 col-lg-9 order-1 order-lg-2">
+
+
+
+
+                <div class="bg-white border rounded-0">
+                    <div class="p-3">
+                        <div class="row justify-content-between align-items-end">
+                            <div class="col-auto">
+                                <div class="fs-7 fw-bold text-dark">
+                                    BOOKING ID : MA266106712
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <div class="d-flex">
+                                    <div class="pe-2 fs-7 fw-bold text-success">
+                                        <i class="fas fa-check-circle"></i>
+                                    </div>
+                                    <div class="ps-0 fs-7 fw-bold text-success">
+                                        Confirmed
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="">
+                        <ng-container *ngFor="let item of bookingdetail">
+                            <ng-container *ngFor="let service of item.service; index as j;">
+                                <div class="border-top p-3">
+                                    <div class="fs-7 text-secondary">
+                                        {{ item.bookingid }}
+                                    </div>
+                                    <div class="fs-7 text-secondary">
+                                        {{ service.type }}
+                                    </div>
+                                    <div class="fs-7 text-secondary">
+                                        {{ service.period }}
+                                    </div>
+                                    <div class="mt-2 border-top py-3">
+                                        <div class="fs-7 text-secondary">
+                                            {{ service.image }}
+                                        </div>
+                                        <div class="fs-7 text-secondary">
+                                            {{ service.name }}
+                                        </div>
+                                        <div class="fs-7 text-secondary">
+                                            {{ service.address }}
+                                        </div>
+                                        <div class="fs-7 text-secondary">
+                                            {{ service.checkin }}
+                                        </div>
+                                        <div class="fs-7 text-secondary">
+                                            {{ service.checkout }}
+                                        </div>
+                                        <div class="fs-7 text-secondary">
+                                            {{ service.nights }}
+                                        </div>
+                                    </div>
+                                    <ng-container *ngIf="service.enhancement">
+                                        <div class="fs-7 fw-bold text-dark">
+                                            Enhancement
+                                        </div>
+                                        <ng-container *ngFor="let enhance of service.enhancement; index as k;">
+                                            <div class="border-top py-3">
+                                                <div class="fs-7 text-secondary">
+                                                    {{ enhance.image }}
+                                                </div>
+                                                <div class="fs-7 text-secondary">
+                                                    {{ enhance.name }}
+                                                </div>
+                                                <div class="fs-7 text-secondary">
+                                                    {{ enhance.date }} - {{ enhance.time }}
+                                                </div>
+                                                <div class="fs-7 text-secondary">
+                                                    {{ enhance.adult }}
+                                                </div>
+                                                <div class="fs-7 text-secondary">
+                                                    {{ enhance.adultprice }}
+                                                </div>
+                                                <div class="fs-7 text-secondary">
+                                                    {{ item.currency }}
+                                                    {{ enhance.adult * enhance.adultprice | number }}
+
+                                                </div>
+                                            </div>
+                                        </ng-container>
+                                    </ng-container>
+                                </div>
+                            </ng-container>
+                        </ng-container>
+
+                        <!--
+<img src="https://www.jtbtrip.com/ImageData/Hotel/w22_hotel_by_burasari-general1.jpg" class="w-100">
+                        <div class="pb-3">
+                            <div class="row">
+                                <div class="col-2">
+                                    <div class="fs-9 text-secondary text-uppercase">
+                                        Service date
+                                    </div>
+                                    <div class="fs-7 fw-bold text-dark">
+                                        11-13 Nov 2022
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <div class="fs-9 text-secondary text-uppercase">
+                                        Service
+                                    </div>
+                                    <div class="fs-7 fw-bold text-dark">
+                                        HOTEL
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="fs-9 text-secondary text-uppercase">
+                                        Detail
+                                    </div>
+                                    <div class="fs-7 fw-bold text-dark">
+                                        HTL BANGKOK
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="fs-9 text-secondary text-uppercase">
+                                        Detail
+                                    </div>
+                                    <div class="fs-7 fw-bold text-dark">
+                                        HTL BANGKOK
+                                    </div>
+                                </div>
+                                <div class="col-1">
+                                    <button class="btn btn-outline-primary w-100 rounded-0 fs-8">
+                                        V
+                                    </button>
+                                </div>
+                            </div>
+                        </div> -->
+
+                        <!--
+                        <div class="fs-5 text-title">
+                            HTL BANGKOK
+                        </div>
+                        <div class="fs-7 text-secondary">
+                            9/3 Soi Ratchadapisek 18 Ratchadapisek Rd., Huay Kwang Bangkok 10310, Thailand
+                        </div>
+                        <div class="">
+                            Room #1
+                            Superior Mountain View / Room only
+                            2 Adults, 0 Children
+                        </div>
+                        <div class="">
+                            <div class="">
+                                Lionel Messi, Mr.
+                            </div>
+                            <div class="">
+                                Antonela Roccuzzo, Mrs.
+                            </div>
+                        </div> -->
+
+                    </div>
+
+
+                </div>
+
+
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+</div>

@@ -7,6 +7,7 @@ import { MyBookingsComponent } from './pages/my-bookings/my-bookings.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { MemberLinksComponent } from './components/member-links/member-links.component';
 import { ChangePasswordComponent } from './pages/change-password/change-password.component';
+import { BookingDetailComponent } from './pages/booking-detail/booking-detail.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { ChangePasswordComponent } from './pages/change-password/change-password
     MyBookingsComponent,
     DashboardComponent,
     MemberLinksComponent,
-    ChangePasswordComponent
+    ChangePasswordComponent,
+    BookingDetailComponent
   ],
   imports: [
     CommonModule,
