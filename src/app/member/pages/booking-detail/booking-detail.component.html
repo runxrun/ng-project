@@ -33,10 +33,6 @@
                 <app-member-links></app-member-links>
             </div>
             <div class="pb-3 pb-lg-0 col-12 col-lg-9 order-1 order-lg-2">
-
-
-
-
                 <ng-container *ngFor="let item of bookingdetail">
                     <div class="bg-white border rounded-0">
                         <div class="p-3">
@@ -44,199 +40,300 @@
                                 BOOKING ID : {{ item.bookingid }}
                             </div>
                         </div>
-                        <div class="">
-                            <ng-container *ngFor="let service of item.service; index as j;">
-                                <div class="border-top p-3">
-                                    <div class="fs-7 text-secondary">
-                                        {{ service.period }}
-                                    </div>
-                                    <div class="fs-7 text-secondary">
-                                        {{ service.type }}
-                                    </div>
-                                    <div class="mt-2 border-top border-2 border-dark py-3">
+                        <ng-container *ngFor="let service of item.service; index as j;">
+                            <div class="border-top p-3">
 
-
-                                        <div class="row">
-                                            <div class="pb-3 col-12 col-md-4 col-lg-3">
-                                                <div class="rn-bgcover"
-                                                    style="background-image: url('{{ service.image }}');">
-                                                    <img src="/assets/images/image-ratio-4-3.gif" class="w-100">
-                                                </div>
+                                <div class="pb-3">
+                                    <div class="row justify-content-between">
+                                        <div class="col-auto">
+                                            <div class="fs-7 text-secondary">
+                                                {{ service.period }}
                                             </div>
-                                            <div class="pb-3 col-12 col-md-8 col-lg-9">
-                                                <div class="pb-3">
-                                                    <div class="fs-5 text-dark text-title">
-                                                        {{ service.name }}
-                                                    </div>
-                                                    <div class="fs-7 text-secondary">
-                                                        {{ service.address }}
-                                                    </div>
-                                                </div>
-
-
-                                                <div class="pb-3">
-                                                    <div class="d-flex">
-                                                        <div class="pe-2 fs-7 fw-bold text-success">
-                                                            <i class="fas fa-check-circle"></i>
-                                                        </div>
-                                                        <div class="ps-0 fs-7 fw-bold text-success">
-                                                            {{ service.status }}
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-
-
-
-
-
-                                                <div class="">
-                                                    <div class="row">
-                                                        <div class="col-auto">
-                                                            <div class="fs-7 fw-bold text-dark">
-                                                                <div class="pb-1">Check-in</div>
-                                                                <div class="pb-1">Check-out</div>
-                                                                <!-- <div class="pb-1">Stay</div> -->
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-auto">
-                                                            <div class="fs-7 text-secondary">
-                                                                <div class="pb-1">{{ service.checkin | date:'EEE, d MMM y' }}</div>
-                                                                <div class="pb-1">{{ service.checkout | date:'EEE, d MMM y' }}</div>
-                                                                <div class="pb-1">{{ service.nights }} nights</div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="fs-7 text-secondary">
-
-                                                </div>
+                                            <div class="fs-7 text-secondary">
+                                                {{ service.type }}
+                                            </div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <div class="">
+                                                <button class="btn btn-outline-primary fs-8 rounded-0">
+                                                    Print voucher
+                                                </button>
                                             </div>
                                         </div>
                                     </div>
-                                    <div>
-                                        <ng-container *ngFor="let enhance of service.enhancement; index as k;">
-                                            <div class="border-top py-3">
+                                </div>
+
+                                <div class="border-top border-2 border-dark py-3">
+                                    <div class="row">
+                                        <div class="pb-3 col-12 col-md-4 col-lg-3">
+                                            <div class="rn-bgcover"
+                                                style="background-image: url('{{ service.image }}');">
+                                                <img src="/assets/images/image-ratio-4-3.gif" class="w-100">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-8 col-lg-9">
+                                            <div class="pb-3">
+                                                <div class="fs-5 text-dark text-title">
+                                                    {{ service.name }}
+                                                </div>
+                                                <div class="fs-7 text-secondary">
+                                                    {{ service.address }}
+                                                </div>
+                                            </div>
+                                            <div class="pb-3">
+                                                <div class="d-flex">
+                                                    <div class="pe-2 fs-7 fw-bold text-success">
+                                                        <i class="fas fa-check-circle"></i>
+                                                    </div>
+                                                    <div class="ps-0 fs-7 fw-bold text-success">
+                                                        {{ service.status }}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="pb-3">
                                                 <div class="row">
-                                                    <div class="col-3">
-                                                        <div class="rn-bgcover"
-                                                            style="background-image: url('{{ enhance.image }}');">
-                                                            <img src="/assets/images/image-ratio-4-3.gif" class="w-100">
+                                                    <div class="col-auto">
+                                                        <div class="fs-7 fw-bold text-dark">
+                                                            <div class="pb-1">Check-in</div>
+                                                            <div class="pb-1">Check-out</div>
+                                                            <div class="pb-1">Stay</div>
                                                         </div>
                                                     </div>
-                                                    <div class="col-9">
-                                                        <div class="fs-5 text-dark text-title">
-                                                            {{ enhance.name }}
-                                                        </div>
+                                                    <div class="col-auto">
                                                         <div class="fs-7 text-secondary">
-                                                            {{ enhance.date }} - {{ enhance.time }}
-                                                        </div>
-                                                        <div class="fs-7 text-secondary">
-                                                            {{ enhance.adult }}
-                                                        </div>
-                                                        <div class="fs-7 text-secondary">
-                                                            {{ enhance.adultprice }}
-                                                        </div>
-                                                        <div class="fs-7 text-secondary">
-                                                            {{ item.currency }}
-                                                            {{ enhance.adult * enhance.adultprice | number }}
+                                                            <div class="pb-1">
+                                                                {{ service.checkin | date:'EEE, d MMM y' }}
+                                                            </div>
+                                                            <div class="pb-1">
+                                                                {{ service.checkout | date:'EEE, d MMM y' }}
+                                                            </div>
+                                                            <div class="pb-1">
+                                                                {{ service.nights }} nights
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </ng-container>
+                                            <div class="pb-3">
+                                                <ng-container *ngFor="let room of service.room; index as z">
+                                                    <div class="border-top border-1 bg-light py-2 px-3">
+                                                        <div class="row">
+                                                            <div class="col-4 col-sm-3">
+                                                                <div class="fs-7 fw-bold text-dark">
+                                                                    Room #{{ z+1 }}
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-8 col-sm-9">
+                                                                <div class="fs-7 fw-bold text-dark">
+                                                                    {{ room.name }} /
+                                                                    {{ room.meal }}
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="py-2 px-3">
+                                                        <div class="row">
+                                                            <div class="pb-2 col-4 col-sm-3">
+                                                                <div class="fs-7 text-secondary">
+                                                                    Guest in room
+                                                                </div>
+                                                            </div>
+                                                            <div class="pb-2 col-8 col-sm-9">
+                                                                <div class="fs-7 text-secondary">
+                                                                    {{ room.adult }} Adults,
+                                                                    {{ room.child }} Child
+                                                                </div>
+                                                            </div>
+                                                            <div class="pb-2 col-4 col-sm-3">
+                                                                <div class="fs-7 text-secondary">
+                                                                    Guest name
+                                                                </div>
+                                                            </div>
+                                                            <div class="pb-2 col-8 col-sm-9">
+                                                                <ng-container
+                                                                    *ngFor="let guestname of room.guest; index as y">
+                                                                    <div class="fs-7 text-secondary">
+                                                                        {{ guestname.firstname }}
+                                                                        {{ guestname.lastname }},
+                                                                        {{ guestname.title }}
+                                                                    </div>
+                                                                </ng-container>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="py-2 px-3">
+                                                        <div class="d-flex">
+                                                            <div class="pe-2 fs-7 fw-bold text-danger">
+                                                                <i class="fas fa-exclamation-circle"></i>
+                                                            </div>
+                                                            <div class="ps-0">
+                                                                <div class="fs-7 fw-bold text-danger">
+                                                                    Cancellation Policy
+                                                                </div>
+                                                                <div class="pb-3">
+                                                                    <div class="pt-1 fs-7 text-secondary">
+                                                                        {{ room.cancel }}
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </ng-container>
+
+
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </ng-container>
+                                <ng-container *ngFor="let enhance of service.enhancement; index as k;">
+                                    <div class="border-top py-3">
+                                        <div class="row">
+                                            <div class="pb-3 col-12 col-md-4 col-lg-3">
+                                                <div class="rn-bgcover"
+                                                    style="background-image: url('{{ enhance.image }}');">
+                                                    <img src="/assets/images/image-ratio-4-3.gif" class="w-100">
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-8 col-lg-9">
+                                                <div class="pb-3">
+                                                    <div class="fs-5 text-dark text-title">
+                                                        {{ enhance.name }}
+                                                    </div>
+                                                </div>
+
+                                                <div class="pb-3">
+                                                    <div class="row">
+                                                        <div class="col-4 col-lg-3">
+                                                            <div class="pb-1 fs-7 fw-bold text-dark">
+                                                                Service date
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-8 col-lg-9">
+                                                            <div class="pb-1 fs-7 text-secondary">
+                                                                {{ enhance.date }}, {{ enhance.time }} Hrs.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-4 col-lg-3">
+                                                            <div class="pb-1 fs-7 fw-bold text-dark">
+                                                                Adult price
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-8 col-lg-9">
+                                                            <div class="pb-1 fs-7 text-secondary">
+                                                                {{ item.currency }}
+                                                                {{ enhance.adultprice | number }}
+                                                                x {{ enhance.adult }}
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <ng-container *ngIf="enhance.child">
+                                                        <div class="row">
+                                                            <div class="col-4 col-lg-3">
+                                                                <div class="pb-1 fs-7 fw-bold text-dark">
+                                                                    Child price
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-8 col-lg-9">
+                                                                <div class="pb-1 fs-7 text-secondary">
+                                                                    {{ item.currency }}
+                                                                    {{ enhance.childprice | number }}
+                                                                    x {{ enhance.child }}
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </ng-container>
+                                                    <div class="row">
+                                                        <div class="col-4 col-lg-3">
+                                                            <div class="pb-1 fs-7 fw-bold text-dark">
+                                                                Total price
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-8 col-lg-9">
+                                                            <div class="pb-1 fs-7 fw-bold text-dark">
+                                                                {{ item.currency }}
+                                                                {{
+                                                                (enhance.adult * enhance.adultprice) +
+                                                                (enhance.child * enhance.childprice) | number
+                                                                }}
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
 
 
-
-
-                            <!--
-
-                                             -->
-
-
-
-
-
-
-
-                            <!--
-<img src="https://www.jtbtrip.com/ImageData/Hotel/w22_hotel_by_burasari-general1.jpg" class="w-100">
-                        <div class="pb-3">
-                            <div class="row">
-                                <div class="col-2">
-                                    <div class="fs-9 text-secondary text-uppercase">
-                                        Service date
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="fs-7 fw-bold text-dark">
-                                        11-13 Nov 2022
-                                    </div>
-                                </div>
-                                <div class="col-2">
-                                    <div class="fs-9 text-secondary text-uppercase">
-                                        Service
-                                    </div>
-                                    <div class="fs-7 fw-bold text-dark">
-                                        HOTEL
-                                    </div>
-                                </div>
-                                <div class="col-4">
-                                    <div class="fs-9 text-secondary text-uppercase">
-                                        Detail
-                                    </div>
-                                    <div class="fs-7 fw-bold text-dark">
-                                        HTL BANGKOK
-                                    </div>
-                                </div>
-                                <div class="col-3">
-                                    <div class="fs-9 text-secondary text-uppercase">
-                                        Detail
-                                    </div>
-                                    <div class="fs-7 fw-bold text-dark">
-                                        HTL BANGKOK
-                                    </div>
-                                </div>
-                                <div class="col-1">
-                                    <button class="btn btn-outline-primary w-100 rounded-0 fs-8">
-                                        V
-                                    </button>
-                                </div>
+                                </ng-container>
                             </div>
-                        </div> -->
-
-                            <!--
-                        <div class="fs-5 text-title">
-                            HTL BANGKOK
-                        </div>
-                        <div class="fs-7 text-secondary">
-                            9/3 Soi Ratchadapisek 18 Ratchadapisek Rd., Huay Kwang Bangkok 10310, Thailand
-                        </div>
-                        <div class="">
-                            Room #1
-                            Superior Mountain View / Room only
-                            2 Adults, 0 Children
-                        </div>
-                        <div class="">
-                            <div class="">
-                                Lionel Messi, Mr.
-                            </div>
-                            <div class="">
-                                Antonela Roccuzzo, Mrs.
-                            </div>
-                        </div> -->
-
-                        </div>
-
-
+                        </ng-container>
                     </div>
-
-
                 </ng-container>
 
 
-
+                <div class="mt-3 border bg-white">
+                    <div>
+                        <div class="">
+                            HTL BANGKOK
+                        </div>
+                        <div class="">
+                            Superior Mountain View x 1
+                        </div>
+                        <div class="">
+                            THB 1,276.70
+                        </div>
+                        <div class="">
+                            One Bedroom Deluxe Double x 1
+                        </div>
+                        <div class="">
+                            THB 1,520.00
+                        </div>
+                        <div class="">
+                            HTL BKK Massage & Spa
+                        </div>
+                        <div class="">
+                            3 Adults
+                        </div>
+                        <div class="">
+                            THB 1,500.00
+                        </div>
+                        <div class="">
+                            HTL BKK Restaurant (Buffet)
+                        </div>
+                        <div class="">
+                            4 Adults
+                        </div>
+                        <div class="">
+                            THB 2,000.00
+                        </div>
+                        <div class="">
+                            Total due
+                        </div>
+                        <div class="">
+                            Discount 10%
+                        </div>
+                        <div class="">
+                            THB 5,667.03
+                        </div>
+                        <div class="">
+                            THB 6,296.70
+                        </div>
+                        <div class="">
+                            Service charges
+                        </div>
+                        <div class="">
+                            THB 327.86
+                        </div>
+                        <div class="">
+                            TAX
+                        </div>
+                        <div class="">
+                            THB 178.74
+                        </div>
+                    </div>
+                </div>
 
 
 

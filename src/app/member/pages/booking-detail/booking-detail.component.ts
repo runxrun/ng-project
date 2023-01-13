@@ -22,6 +22,55 @@ export class BookingDetailComponent {
           checkout: '2022-11-13',
           nights: '2',
           status: 'Complete',
+          room: [
+            {
+              roomno: 1,
+              name: 'Superior Mountain View',
+              meal: 'Room only',
+              adult: 2,
+              child: 1,
+              price: 1276.70,
+              guest: [
+                {
+                  title: 'Mr.',
+                  firstname: 'Leonel',
+                  lastname: 'Messi',
+                },
+                {
+                  title: 'Mrs.',
+                  firstname: 'Antonela',
+                  lastname: 'Roccuzzo',
+                },
+                {
+                  title: 'Mr.',
+                  firstname: 'Thiago',
+                  lastname: 'Messi',
+                },
+              ],
+              cancel: 'Free cancellation before 21 December 2022 (Cheapest offer)',
+            },
+            {
+              roomno: 1,
+              name: 'One Bedroom Deluxe Double',
+              meal: 'Room only',
+              adult: 2,
+              child: 0,
+              price: 1520,
+              guest: [
+                {
+                  title: 'Mr.',
+                  firstname: 'Cristiano',
+                  lastname: 'Ronaldo',
+                },
+                {
+                  title: 'Mrs.',
+                  firstname: 'Georgina',
+                  lastname: 'Rodríguez',
+                },
+              ],
+              cancel: 'Free cancellation before 21 December 2022 (Cheapest offer)',
+            },
+          ],
           enhancement: [
             {
               image: 'https://manage.combinetrip.com/ImageData/Place/urban-oasis-spa-general3.jpg',
@@ -30,6 +79,8 @@ export class BookingDetailComponent {
               time: '14:00',
               adult: 3,
               adultprice: 500,
+              child: 0,
+              childprice: 0,
             },
             {
               image: 'https://manage.combinetrip.com/imagedata/Place/800/the_raweekanlaya_dining-general1.jpg',
@@ -38,6 +89,8 @@ export class BookingDetailComponent {
               time: '18:00',
               adult: 4,
               adultprice: 500,
+              child: 1,
+              childprice: 120,
             },
           ],
         },
