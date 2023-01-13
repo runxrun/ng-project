@@ -22,6 +22,18 @@ export class BookingDetailComponent {
           checkout: '2022-11-13',
           nights: '2',
           status: 'Complete',
+          flight: [
+            {
+              fromdate: '11 Nov 2022',
+              eta: '07:00 Hrs',
+              fltnumberfrom: 'FD7652',
+              travelfrom: 'Buenos Aires',
+              todate: '13 Nov 2022',
+              etd: '19:50 Hrs',
+              fltnumberto: 'FD9807',
+              travelto: 'Buenos Aires',
+            },
+          ],
           room: [
             {
               roomno: 1,
@@ -47,7 +59,12 @@ export class BookingDetailComponent {
                   lastname: 'Messi',
                 },
               ],
-              cancel: 'Free cancellation before 21 December 2022 (Cheapest offer)',
+              cancellation: [
+                {
+                  cxlroom: 'Superior Mountain View - Apply to all meal type',
+                  cxlrate: 'Booking Cancel after 16-Jun-2018, 50.00 % cancellation charge for the entire stay will be applied.',
+                },
+              ],
             },
             {
               roomno: 1,
@@ -68,7 +85,12 @@ export class BookingDetailComponent {
                   lastname: 'Rodríguez',
                 },
               ],
-              cancel: 'Free cancellation before 21 December 2022 (Cheapest offer)',
+              cancellation: [
+                {
+                  cxlroom: 'One Bedroom Deluxe Double - Apply to all meal type',
+                  cxlrate: 'Booking Cancel after 16-Jun-2018, 50.00 % cancellation charge for the entire stay will be applied.',
+                },
+              ],
             },
           ],
           enhancement: [

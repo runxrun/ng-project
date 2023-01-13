@@ -171,16 +171,165 @@
                                                                     Cancellation Policy
                                                                 </div>
                                                                 <div class="pb-3">
-                                                                    <div class="pt-1 fs-7 text-secondary">
-                                                                        {{ room.cancel }}
-                                                                    </div>
+                                                                    <ng-container
+                                                                        *ngFor="let cxl of room.cancellation;">
+                                                                        <div class="pt-2 fs-7 fw-bold text-dark">
+                                                                            {{ cxl.cxlroom }}
+                                                                        </div>
+                                                                        <div class="pt-1 fs-7 text-secondary">
+                                                                            {{ cxl.cxlrate }}
+                                                                        </div>
+                                                                    </ng-container>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </ng-container>
 
+                                                <div class="border-top border-1 py-3">
+                                                    <div class="row">
+                                                        <div class="col-12 col-md-4 col-lg-3">
+                                                            <div class="fs-7 fw-bold text-dark">
+                                                                Special request
+                                                            </div>
+                                                        </div>
+                                                        <div class="pb-2 col-12 col-md-8 col-lg-9">
+                                                            <div class="fs-7 text-secondary">
+                                                                Room on high floor, Room on same floor
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-md-4 col-lg-3">
+                                                            <div class="fs-7 fw-bold text-dark">
+                                                                Compulsory
+                                                            </div>
+                                                        </div>
+                                                        <div class="pb-2 col-12 col-md-8 col-lg-9">
+                                                            <div class="fs-7 text-secondary">
+                                                                Magni itaque quibusdam reprehenderit sint maxime.
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-md-4 col-lg-3">
+                                                            <div class="fs-7 fw-bold text-dark">
+                                                                Supplementary
+                                                            </div>
+                                                        </div>
+                                                        <div class="pb-2 col-12 col-md-8 col-lg-9">
+                                                            <div class="fs-7 text-secondary">
+                                                                Voluptatum architecto accusantium iure ullam neque.
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-md-4 col-lg-3">
+                                                            <div class="fs-7 fw-bold text-dark">
+                                                                Hotel Message
+                                                            </div>
+                                                        </div>
+                                                        <div class="pb-2 col-12 col-md-8 col-lg-9">
+                                                            <div class="fs-7 text-secondary">
+                                                                Odio ratione cum dicta reprehenderit itaque.
+                                                                molestiae architecto libero odio porro quisquam
+                                                                consectetur ad, provident nobis fugiat? Optio sequi
+                                                                ducimus pariatur nostrum?
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
 
+                                                <div class="border-top border-1 pt-3">
+                                                    <ng-container *ngFor="let flight of service.flight">
+                                                        <div class="row">
+                                                            <div class="pb-2 col-12 col-lg-6">
+
+                                                                <div class="row">
+                                                                    <div class="pb-1 col-6">
+                                                                        <div class="fs-7 fw-bold text-dark">
+                                                                            Flight from date
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="pb-1 col-6">
+                                                                        <div class="fs-7 text-secondary">
+                                                                            {{ flight.fromdate }}
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="pb-1 col-6">
+                                                                        <div class="fs-7 fw-bold text-dark">
+                                                                            ETA
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="pb-1 col-6">
+                                                                        <div class="fs-7 text-secondary">
+                                                                            {{ flight.eta }}
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="pb-1 col-6">
+                                                                        <div class="fs-7 fw-bold text-dark">
+                                                                            Flight number
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="pb-1 col-6">
+                                                                        <div class="fs-7 text-secondary">
+                                                                            {{ flight.fltnumberfrom }}
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="pb-1 col-6">
+                                                                        <div class="fs-7 fw-bold text-dark">
+                                                                            Travel from
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="pb-1 col-6">
+                                                                        <div class="fs-7 text-secondary">
+                                                                            {{ flight.travelfrom }}
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12 col-lg-6">
+
+                                                                <div class="row">
+                                                                    <div class="pb-1 col-6">
+                                                                        <div class="fs-7 fw-bold text-dark">
+                                                                            Flight to date
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="pb-1 col-6">
+                                                                        <div class="fs-7 text-secondary">
+                                                                            {{ flight.todate }}
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="pb-1 col-6">
+                                                                        <div class="fs-7 fw-bold text-dark">
+                                                                            ETD
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="pb-1 col-6">
+                                                                        <div class="fs-7 text-secondary">
+                                                                            {{ flight.etd }}
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="pb-1 col-6">
+                                                                        <div class="fs-7 fw-bold text-dark">
+                                                                            Flight number
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="pb-1 col-6">
+                                                                        <div class="fs-7 text-secondary">
+                                                                            {{ flight.fltnumberto }}
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="pb-1 col-6">
+                                                                        <div class="fs-7 fw-bold text-dark">
+                                                                            Travel to
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="pb-1 col-6">
+                                                                        <div class="fs-7 text-secondary">
+                                                                            {{ flight.travelto }}
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </ng-container>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -200,7 +349,6 @@
                                                         {{ enhance.name }}
                                                     </div>
                                                 </div>
-
                                                 <div class="pb-3">
                                                     <div class="row">
                                                         <div class="col-4 col-lg-3">
@@ -267,13 +415,22 @@
                                         </div>
                                     </div>
                                 </ng-container>
+                                <div class="border-top pt-3">
+                                    <div class="row justify-content-end">
+                                        <div class="col-auto">
+                                            <button class="btn btn-outline-dark rounded-0 fs-8">
+                                                Request cancel
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </ng-container>
                     </div>
                 </ng-container>
 
 
-                <div class="mt-3 border bg-white">
+                <div class="mt-3 border bg-white p-3">
                     <div>
                         <div class="">
                             HTL BANGKOK
