@@ -62,7 +62,7 @@ export class BookingDetailComponent {
               cancellation: [
                 {
                   cxlroom: 'Superior Mountain View - Apply to all meal type',
-                  cxlrate: 'Booking Cancel after 16-Jun-2018, 50.00 % cancellation charge for the entire stay will be applied.',
+                  cxlrate: 'Booking Cancel after 09 Nov 2023, 50.00 % cancellation charge for the entire stay will be applied.',
                 },
               ],
             },
@@ -88,7 +88,7 @@ export class BookingDetailComponent {
               cancellation: [
                 {
                   cxlroom: 'One Bedroom Deluxe Double - Apply to all meal type',
-                  cxlrate: 'Booking Cancel after 16-Jun-2018, 50.00 % cancellation charge for the entire stay will be applied.',
+                  cxlrate: 'Booking Cancel after 10 Nov 2023, 50.00 % cancellation charge for the entire stay will be applied.',
                 },
               ],
             },
@@ -119,37 +119,5 @@ export class BookingDetailComponent {
       ],
     }
   ];
-
 }
-//Superior Mountain View
-//One Bedroom Deluxe Double
-/*
 
-            {
-              image: 'https://manage.combinetrip.com/ImageData/Place/urban-oasis-spa-general3.jpg',
-              name: 'HTL BKK Massage & Spa',
-              date: '12 Nov 2022',
-              time: '14:00',
-              adult: 3,
-              adultprice: 500,
-            },
-            {
-              image: 'https://manage.combinetrip.com/imagedata/Place/800/the_raweekanlaya_dining-general1.jpg',
-              name: 'HTL BKK Restaurant (Buffet)',
-              date: '12 Nov 2022',
-              time: '18:00',
-              adult: 4,
-              adultprice: 500,
-            },
-
-      services: [{
-        hotelname: 'HTL BANGKOK',
-        hoteladdress: '9/3 Soi Ratchadapisek 18 Ratchadapisek Rd., Huay Kwang Bangkok 10310, Thailand',
-        hotelnxxxame: 'HTL BKK BKK Restaurant (Buffet)',
-      },
-      ],
-      checkin: '2022-11-11',
-      checkout: '2022-11-13',
-      period: '11-13 Nov 2022',
-      bookedon: '2022-11-10',
-      status: 'Completed',*/

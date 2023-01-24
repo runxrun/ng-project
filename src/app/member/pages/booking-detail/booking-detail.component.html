@@ -161,27 +161,29 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="py-2 px-3">
+                                                </ng-container>
+
+                                                <ng-container>
+                                                    <div class="py-3 px-0 border-top border-1">
                                                         <div class="d-flex">
                                                             <div class="pe-2 fs-7 fw-bold text-danger">
                                                                 <i class="fas fa-exclamation-circle"></i>
                                                             </div>
-                                                            <div class="ps-0">
-                                                                <div class="fs-7 fw-bold text-danger">
-                                                                    Cancellation Policy
-                                                                </div>
-                                                                <div class="pb-3">
-                                                                    <ng-container
-                                                                        *ngFor="let cxl of room.cancellation;">
-                                                                        <div class="pt-2 fs-7 fw-bold text-dark">
-                                                                            {{ cxl.cxlroom }}
-                                                                        </div>
-                                                                        <div class="pt-1 fs-7 text-secondary">
-                                                                            {{ cxl.cxlrate }}
-                                                                        </div>
-                                                                    </ng-container>
-                                                                </div>
+                                                            <div class="pe-2 fs-7 fw-bold text-danger">
+                                                                Cancellation
                                                             </div>
+                                                        </div>
+                                                        <div class="py-2">
+                                                            <ng-container *ngFor="let room of service.room; index as z">
+                                                                <ng-container *ngFor="let cxl of room.cancellation;">
+                                                                    <div class="pt-2 fs-7 fw-bold text-dark">
+                                                                        {{ cxl.cxlroom }}
+                                                                    </div>
+                                                                    <div class="pt-1 fs-7 text-secondary">
+                                                                        {{ cxl.cxlrate }}
+                                                                    </div>
+                                                                </ng-container>
+                                                            </ng-container>
                                                         </div>
                                                     </div>
                                                 </ng-container>
@@ -409,8 +411,6 @@
                                                         </div>
                                                     </div>
                                                 </div>
-
-
                                             </div>
                                         </div>
                                     </div>
@@ -418,9 +418,48 @@
                                 <div class="border-top pt-3">
                                     <div class="row justify-content-end">
                                         <div class="col-auto">
-                                            <button class="btn btn-outline-dark rounded-0 fs-8">
+                                            <button class="btn btn-outline-dark rounded-0 fs-8" data-bs-toggle="modal"
+                                                data-bs-target="#cancelServiceModel">
                                                 Request cancel
                                             </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="modal fade" id="cancelServiceModel" tabindex="-1" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <div class="fs-6 fw-bold text-dark">
+                                                    Cancel Booking
+                                                </div>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close">
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="fs-7 fw-bold text-dark">
+                                                    Do you confirm that you want to cancel {{ service.name }}?
+                                                </div>
+                                                <div class="pb-2 fs-7 text-secondary">
+                                                    Proceeding with the cancellation will result in a charge of 50%.
+                                                </div>
+                                                <div class="fs-7 text-secondary">
+                                                    Superior Mountain View, Charge of THB638.35
+                                                </div>
+                                                <div class="fs-7 text-secondary">
+                                                    One Bedroom Deluxe Double, Charge of THB760.00
+                                                </div>
+                                                <div class="pt-2 fs-7 fw-bold text-dark">
+                                                    Total charge THB1,398.35
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary fs-8 rounded-0"
+                                                    data-bs-dismiss="modal">Close</button>
+                                                <button type="button"
+                                                    class="btn btn-danger fs-8 rounded-0 px-4">Cancel</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -430,71 +469,106 @@
                 </ng-container>
 
 
-                <div class="mt-3 border bg-white p-3">
-                    <div>
-                        <div class="">
-                            HTL BANGKOK
+
+
+
+                <div class="mt-3 border bg-white">
+                    <div class="p-3 border-bottom">
+                        <div class="fs-7 fw-bold text-dark">
+                            PAYMENT DETAILS
                         </div>
-                        <div class="">
-                            Superior Mountain View x 1
-                        </div>
-                        <div class="">
-                            THB 1,276.70
-                        </div>
-                        <div class="">
-                            One Bedroom Deluxe Double x 1
-                        </div>
-                        <div class="">
-                            THB 1,520.00
-                        </div>
-                        <div class="">
-                            HTL BKK Massage & Spa
-                        </div>
-                        <div class="">
-                            3 Adults
-                        </div>
-                        <div class="">
-                            THB 1,500.00
-                        </div>
-                        <div class="">
-                            HTL BKK Restaurant (Buffet)
-                        </div>
-                        <div class="">
-                            4 Adults
-                        </div>
-                        <div class="">
-                            THB 2,000.00
-                        </div>
-                        <div class="">
-                            Total due
-                        </div>
-                        <div class="">
-                            Discount 10%
-                        </div>
-                        <div class="">
-                            THB 5,667.03
-                        </div>
-                        <div class="">
-                            THB 6,296.70
-                        </div>
-                        <div class="">
-                            Service charges
-                        </div>
-                        <div class="">
-                            THB 327.86
-                        </div>
-                        <div class="">
-                            TAX
-                        </div>
-                        <div class="">
-                            THB 178.74
+                    </div>
+                    <div class="p-3">
+                        <div class="row g-3 justify-content-between align-items-end">
+                            <div class="col-12 col-lg-8">
+                                <div class="pb-2">
+                                    <div class="d-flex pb-1">
+                                        <div class="col-6 col-md-8 fs-7 fw-bold text-dark">
+                                            Superior Mountain View x 1
+                                        </div>
+                                        <div class="col-6 col-md-4 fs-7 text-secondary text-end">
+                                            THB 1,276.70
+                                        </div>
+                                    </div>
+                                    <div class="d-flex pb-1">
+                                        <div class="col-6 col-md-8 fs-7 fw-bold text-dark">
+                                            One Bedroom Deluxe Double x 1
+                                        </div>
+                                        <div class="col-6 col-md-4 fs-7 text-secondary text-end">
+                                            THB 1,520.00
+                                        </div>
+                                    </div>
+                                    <div class="d-flex pb-1">
+                                        <div class="col-6 col-md-8 fs-7 fw-bold text-dark">
+                                            HTL BKK Massage & Spa, (3 Adults)
+                                        </div>
+                                        <div class="col-6 col-md-4 fs-7 text-secondary text-end">
+                                            THB 1,500.70
+                                        </div>
+                                    </div>
+                                    <div class="d-flex pb-1">
+                                        <div class="col-6 col-md-8 fs-7 fw-bold text-dark">
+                                            HTL BKK Restaurant (Buffet), (4 Adults, 1 Children)
+                                        </div>
+                                        <div class="col-6 col-md-4 fs-7 text-secondary text-end">
+                                            THB 2,120.00
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="border-top pt-2 pb-2">
+                                    <div class="d-flex pb-1">
+                                        <div class="ccol-6 col-md-8 fs-7 fw-bold text-dark">
+                                            Product prices
+                                        </div>
+                                        <div class="col-6 col-md-4 fs-7  fw-bold text-dark text-end">
+                                            THB 6,416.70
+                                        </div>
+                                    </div>
+                                    <div class="d-flex pb-1">
+                                        <div class="col-6 col-md-8 fs-7 text-secondary">
+                                            Discount 10%
+                                        </div>
+                                        <div class="col-6 col-md-4 fs-7 text-secondary text-end">
+                                           - THB 641.67
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="border-top pt-2">
+                                    <div class="d-flex">
+                                        <div class="col-6 col-md-8 fs-7 text-secondary">
+                                            Service charges
+                                        </div>
+                                        <div class="col-6 col-md-4 fs-7 text-secondary text-end">
+                                            THB 327.86
+                                        </div>
+                                    </div>
+                                    <div class="d-flex">
+                                        <div class="col-6 col-md-8 fs-7 text-secondary">
+                                            TAX
+                                        </div>
+                                        <div class="col-6 col-md-4 fs-7 text-secondary text-end">
+                                            THB 178.74
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-4">
+                                <div class="pt-4 pt-lg-0 text-center text-lg-end">
+                                    <div class="fs-7 text-secondary">
+                                        Total summary
+                                    </div>
+                                    <div class="fs-3 fw-bold text-dark">
+                                        {{ 5775.03 | currency: 'THB ':'symbol' }}
+                                    </div>
+                                    <div class="pt-2 fs-8 text-secondary">
+                                        <span class="pe-2 opacity-50"><i class="fas fa-info-circle"></i></span>
+                                        <span class="ps-0">Service charges and taxes are included</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-
-
-
-
 
             </div>
         </div>
