@@ -1,4 +1,15 @@
 import { Component } from '@angular/core';
+import { __values } from 'tslib';
+
+interface MyBooking {
+  bookingid: string;
+  services: string[];
+  checkin: string;
+  checkout: string;
+  period: string;
+  bookedon: string;
+  status: string;
+}
 
 @Component({
   selector: 'app-my-bookings',
@@ -8,7 +19,7 @@ import { Component } from '@angular/core';
 export class MyBookingsComponent {
 
 
-  items = [
+  items: MyBooking[] = [
     {
       bookingid: 'MA266106712',
       services: [
@@ -56,6 +67,16 @@ export class MyBookingsComponent {
       case 'Cancelled': return 'text-secondary';
       default: return 'text-dark';
     }
+  }
+
+  filterMyBooking: MyBooking[] = this.items;
+
+  searhBooking(text: string): void {
+    this.filterMyBooking = this.items.filter(mybooking => {
+      const bookingID = mybooking.bookingid.toLowerCase();
+      const searchName = text.toLowerCase();
+      return bookingID.indexOf(searchName) !== -1;
+    });
   }
 
 }
