@@ -13,11 +13,6 @@
                             </div>
                         </div>
                         <div class="pb-2">
-
-
-
-                        </div>
-                        <div class="pb-2">
                             <div>
                                 <label class="fs-7 text-secondary">ID Card</label>
                                 <input type="text" class="form-control rounded-0 fs-7" [formControl]="idCard"
@@ -38,6 +33,60 @@
                 </div>
             </div>
             <div class="col-12 col-lg-9">
+
+
+                <style>
+                    .ratio-4x3 {
+                        max-width: 1280px;
+                        max-height: 960px;
+                        width: 100%;
+                    }
+                </style>
+
+                <div class="row">
+
+                    <ng-container
+                        *ngFor="let product of filteredProducts | slice:currentPage:itemsPerPage; let i = index">
+                        <div class="col-12 col-sm-6 col-md-4">
+                            <div class="position-relative overflow-hidden border">
+                                <div class="d-none d-md-block">
+                                    <img src="/assets/images/image-ratio-4-3.gif" class="w-100">
+                                </div>
+                                <div class="d-block d-md-none">
+                                    <img src="/assets/images/image-ratio-3-4.gif" class="w-100">
+                                </div>
+                                <div class="position-absolute"
+                                    style="z-index: 1; transform: translate(-50%, -50%); top: 50%; left: 50%; height: 100%;">
+                                    <img src="{{ product.image }}"
+                                        style="height: 100%;">
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <div class="col-auto">
+                                    <div class="p-3 fs-5 text-dark text-title">
+                                        {{ product.name }}
+                                    </div>
+                                </div>
+                                <div class="col-auto">
+                                    <div class="p-3 fs-5 text-danger text-title text-end">
+                                        {{ product.price | currency: 'USD':'symbol' }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ng-container>
+
+                </div>
+
+
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+
+
                 <div class="row justify-content-between align-items-end pb-4">
                     <div class="col-auto">
                         <div class="fs-4 text-title text-dark">
@@ -52,7 +101,8 @@
                 </div>
                 <div class="pb-4">
                     <div class="row g-4">
-                        <ng-container *ngFor="let product of filteredProducts | slice:currentPage:itemsPerPage; let i = index">
+                        <ng-container
+                            *ngFor="let product of filteredProducts | slice:currentPage:itemsPerPage; let i = index">
                             <div class="col-12 col-sm-6 col-md-4" [id]="i">
                                 <div class="h-100 bg-white border rounded">
                                     <div class="fs-7 text-secondary">
@@ -94,7 +144,8 @@
                                 </button>
                             </div>
                             <div class="col-4 col-lg-2">
-                                <button class="btn btn-outline-primary w-100 fs-8 px-4 rounded-0" (click)="next_page();">
+                                <button class="btn btn-outline-primary w-100 fs-8 px-4 rounded-0"
+                                    (click)="next_page();">
                                     Next
                                 </button>
                             </div>

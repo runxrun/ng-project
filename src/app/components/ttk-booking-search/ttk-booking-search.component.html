@@ -1,0 +1,15 @@
+<div class="row g-2">
+    <div class="col-9 col-lg-4">
+        <input
+        type="text"
+        #inputElm
+        (input)="inputSearch(inputElm.value)"
+        class="form-control rounded-0 fs-8"
+        placeholder="Booking ID">
+    </div>
+    <div class="col-3 col-lg-auto">
+        <button class="btn btn-primary w-100 rounded-0 fs-8">
+            Clear
+        </button>
+    </div>
+</div>
